@@ -11,8 +11,8 @@
     -   Opening tag `<tagname>` shows where the element begins
     -   Closing tag `</tagname>` shows where it ends
 -   Elements must form a tree, i.e., must be strictly nested
-    -   `<X>...<Y>...</Y></X>` is legal
-    -   `<X>...<Y>...</X></Y>` is not
+    -   `<X>…<Y>…</Y></X>` is legal
+    -   `<X>…<Y>…</X></Y>` is not
 -   And every document should have a single [root element](g:root-element) that encloses everything else
 -   Since `<` and `>` are used to show where tags start and end,
     must use [escape sequences](g:escape-sequence) to represent them
