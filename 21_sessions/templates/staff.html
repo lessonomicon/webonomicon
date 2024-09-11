@@ -7,6 +7,7 @@
     <script src="/static/htmx.js"></script>
     <script src="/static/alpine.js" defer></script>
     <script src="/static/cookies.js"></script>
+
   </head>
   <body>
     <h1>Staff and Experiments</h1>
@@ -49,6 +50,20 @@
         </fieldset>
       </form>
     </div>
-    <div id="experiments"></div>
+    <div id="experiments"
+         hx-target="this"
+         hx-swap="innerHTML"
+    >
+    </div>
+
+    <script>
+      document.body.addEventListener('htmx:responseError', function(evt) {
+        if (evt.detail.xhr.status === 403) {
+          evt.detail.target.innerHTML = '<p class="error-message">Not authorized</p>';
+        } else if (evt.detail.xhr.status === 401) {
+          evt.detail.target.innerHTML = '<p class="error-message">Not authenticated</p>';
+        }
+      });
+    </script>
   </body>
 </html>
