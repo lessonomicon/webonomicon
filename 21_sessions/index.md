@@ -24,7 +24,7 @@
         - This reduces server memory usage and makes scaling easier.
     - Handles token expiration and invalid tokens
     - Uses environment variables for JWT secret
-    - Once authenticated, you will see the cookie value. Check it in [jwt-io].
+    - Once authenticated, you will see the cookie value. Check it in [jwt.io][jwt-io].
     
 [jwt]: https://en.wikipedia.org/wiki/JSON_Web_Token
 [jwt-io]: https://jwt.io
