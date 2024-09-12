@@ -79,8 +79,7 @@ duplicates = [
     ],
     [
         "14_crypt/templates/staff.html",
-        "15_test/templates/staff.html",
-        "21_sessions/templates/staff.html"
+        "15_test/templates/staff.html"
     ],
     [
         "14_crypt/util.py",
