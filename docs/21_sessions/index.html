@@ -34,6 +34,21 @@
 <li><a href="https://jwt.io">jwt.io</a> allows you to decode, verify and generate JWT.</li>
 </ul>
 </li>
+<li>JWT-based authentication implemented in <a href="./server_secure_jwt.py"><code>server_secure_jwt.py</code></a><ul>
+<li>Uses <code>pyjwt</code> library for JSON Web Token handling</li>
+<li>Generates a token upon successful login, storing staff ID and expiration time</li>
+<li>Token <em>should</em> be set as an HTTP-only cookie for security (when a cookie is marked as HTTP-only, JavaScript can no longer access the cookie using <code>document.cookie</code>, preventing cross-site scripting (XSS) attacks)</li>
+<li>Protected routes (like <code>/exp/&lt;staff_id&gt;</code>) verify the JWT before granting access</li>
+<li>Provides stateless authentication, improving scalability<ul>
+<li>JWTs are stateless, meaning the server doesn't need to store session information.</li>
+<li>This reduces server memory usage and makes scaling easier.</li>
+</ul>
+</li>
+<li>Handles token expiration and invalid tokens</li>
+<li>Uses environment variables for JWT secret</li>
+<li>Once authenticated, you will see the cookie value. Check it in <a href="https://jwt.io">jwt-io</a>.</li>
+</ul>
+</li>
 </ul>
 </main>
 <footer>

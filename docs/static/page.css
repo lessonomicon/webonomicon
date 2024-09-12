@@ -155,6 +155,11 @@ ul li {
     margin-left: var(--width-li-adjust);
 }
 
+.error-message {
+        color: red;
+        font-weight: bold;
+}
+
 /* Dark mode disabled for now */
 /*
 @media (prefers-color-scheme: dark) {

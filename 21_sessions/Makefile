@@ -12,3 +12,7 @@ sessions:
 	make migrate_sessions
 	SECRET=$$(cat secret.txt) DATA=temp.db flask --app server_sessions.py run
 
+## jwt: run secure server with JWT authentication
+jwt:
+	make migrate_sessions
+	SECRET=$$(cat secret.txt) JWT_SECRET=$$(openssl rand -hex 32) DATA=temp.db flask --app server_secure_jwt.py run
