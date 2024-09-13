@@ -27,66 +27,6 @@ dependencies = [
 "**/test_*.py" = ["F401", "F811"] # ignore complaints about unused imports for fixtures
 
 [tool.mccole]
-duplicates = [
-    [
-        "04_db/models_pika.py",
-        "05_test/models.py"
-    ],
-    [
-        "07_forms/util.py",
-        "10_htmx/util.py"
-    ],
-    [
-        "10_htmx/templates/experiments.html",
-        "13_auth/templates/experiments.html",
-        "14_crypt/templates/experiments.html",
-        "15_test/templates/experiments.html",
-        "21_sessions/templates/experiments.html"
-    ],
-    [
-        "11_migrate/migrate.py",
-        "12_perm/migrate.py",
-        "13_auth/migrate.py",
-        "14_crypt/migrate.py",
-        "15_test/migrate.py",
-        "19_intl/migrate.py",
-        "21_sessions/migrate.py"
-    ],
-    [
-        "13_auth/models.py",
-        "14_crypt/models.py",
-        "15_test/models.py",
-        "19_intl/models.py"
-    ],
-    [
-        "13_auth/test_authenticate.py",
-        "14_crypt/test_authenticate.py"
-    ],
-    [
-        "13_auth/views.py",
-        "14_crypt/views.py",
-        "15_test/views.py"
-    ],
-    [
-        "14_crypt/secret.txt",
-        "15_test/secret.txt",
-        "19_intl/secret.txt",
-        "21_sessions/secret.txt"
-    ],
-    [
-        "14_crypt/server_secure.py",
-        "15_test/server.py"
-    ],
-    [
-        "14_crypt/templates/staff.html",
-        "15_test/templates/staff.html"
-    ],
-    [
-        "14_crypt/util.py",
-        "15_test/util.py"
-    ]
-]
-
 skips = ["templates"]
 
 [tool.mccole.renames]
