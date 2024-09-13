@@ -91,6 +91,7 @@ Why is this material free to read?
     He was the co-founder and first Executive Director of Software Carpentry
     and received ACM SIGSOFT's Influential Educator Award in 2020.
 
+[conventional]: https://www.conventionalcommits.org/
 [draw-io]: https://www.drawio.com/
 [email]: mailto:gvwilson@third-bit.com
 [jinja]: https://jinja.palletsprojects.com/
