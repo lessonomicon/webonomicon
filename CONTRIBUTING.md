@@ -50,6 +50,22 @@ All contributors must abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
     -   `page.html`: template for website pages
     -   `slides.html`: template for simple HTML slides
 
+## Labels
+
+| Name             | Description                  | Color   |
+| ---------------- | ---------------------------- | ------- |
+| change           | something different          | #FBCA04 |
+| feature          | new feature                  | #B60205 |
+| fix              | something broken             | #5319E7 |
+| good first issue | newcomers are always welcome | #D4C5F9 |
+| talk             | question or discussion       | #0E8A16 |
+| task             | one-off task                 | #1D76DB |
+
+Please use [Conventional Commits][conventional] style for pull requests
+by using `change:`, `feature:`, `fix:`, or `task:` as the first word
+in the title of the commit message.
+You may also use `publish:` if the PR just rebuilds the HTML version of the lesson.
+
 ## FAQ
 
 Do you need any help?
@@ -75,6 +91,7 @@ Why is this material free to read?
     He was the co-founder and first Executive Director of Software Carpentry
     and received ACM SIGSOFT's Influential Educator Award in 2020.
 
+[conventional]: https://www.conventionalcommits.org/
 [draw-io]: https://www.drawio.com/
 [email]: mailto:gvwilson@third-bit.com
 [jinja]: https://jinja.palletsprojects.com/
