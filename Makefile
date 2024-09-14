@@ -30,6 +30,11 @@ render:
 	mccole render ${CSS}
 	@touch docs/.nojekyll
 
+## profile: render with profiling
+profile:
+	mccole profile ${CSS}
+	@touch docs/.nojekyll
+
 ## refresh: convert to HTML, refreshing code samples
 refresh:
 	mccole render --refresh ${CSS}
