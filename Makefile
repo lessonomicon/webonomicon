@@ -11,6 +11,7 @@ all: commands
 # CSS=-css simple.css
 # CSS=-css tacit.css
 CSS=
+HTML_IGNORES = 'Attribute "x-' 'Attribute "@click' 'Attribute "file"'
 
 ## datasets: re-create snailz parameters and datasets
 datasets:
@@ -21,12 +22,17 @@ datasets:
 lint:
 	@ruff check --exclude docs .
 	@mccole lint
-	@html5validator --root docs --blacklist templates --ignore 'Attribute "x-' 'Attribute "@click' \
+	@html5validator --root docs --blacklist templates --ignore ${HTML_IGNORES} \
 	&& echo "HTML checks passed."
 
 ## render: convert to HTML
 render:
 	mccole render ${CSS}
+	@touch docs/.nojekyll
+
+## refresh: convert to HTML, refreshing code samples
+refresh:
+	mccole render --refresh ${CSS}
 	@touch docs/.nojekyll
 
 ## serve: serve generated HTML

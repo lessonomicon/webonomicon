@@ -19,7 +19,37 @@
     -   `BaseRequestHandler` class that does everything except process the incoming data
 -   `TCPServer` creates a new handler each time it gets a connection and calls that object's `handle` method
 -   [`simple_server.py`](./simple_server.py) reads up to 1024 bytes of data and returns a message
+
+```{file="simple_server.py"}
+"""Basic socket server."""
+
+import socketserver
+
+
+CHUNK_SIZE = 1024
+SERVER_ADDRESS = ("localhost", 5000)
+
+
+class MyHandler(socketserver.BaseRequestHandler):
+    def handle(self):
+        data = self.request.recv(CHUNK_SIZE)
+        cli = self.client_address[0]
+        msg = f"server received {len(data)} bytes from {cli}"
+        print(msg)
+        print(data)
+        self.request.sendall(bytes(msg, "utf-8"))
+
+
+if __name__ == "__main__":
+    server = socketserver.TCPServer(SERVER_ADDRESS, MyHandler)
+    server.serve_forever()
+```
+
 -   Use [netcat][netcat] to open a connection and send some text with [`send_with_nc.sh`](./send_with_nc.sh)
+
+```{file="send_with_nc.sh"}
+echo "testing" | nc 127.0.0.1 5000
+```
 
 ## HTTP Request and Response
 
@@ -31,7 +61,18 @@
     -   Path
     -   Protocol version
 -   [`http_request_headers.txt`](./http_request_headers.txt) shows more realistic request
+
+```{file="http_request_headers.txt"}
+```
+
 -   [`http_response.txt`](./http_response.txt) shows possible response
+
+```{file="http_response.txt"}
+```
+
 -   [`http_server.py`](./http_server.py) responds to `GET` with same page every time.
+
+```{file="http_server.py"}
+```
 
 [netcat]: https://en.wikipedia.org/wiki/Netcat
