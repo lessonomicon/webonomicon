@@ -12,21 +12,116 @@
 <main>
 <h1>A Server</h1>
 <ul>
-<li><a href="./server_hello.py"><code>server_hello.py</code></a>: return HTML<ul>
-<li>Go to http://127.0.0.1:5000 to view (5000 being <a href="https://flask.palletsprojects.com/">Flask</a>'s default port)</li>
+<li><a href="./server_hello.py"><code>server_hello.py</code></a>: return HTML</li>
+</ul>
+<pre><code file="server_hello.py">"""Hello server."""
+
+from flask import Flask
+
+HELLO = """\
+&lt;html&gt;
+&lt;body&gt;
+&lt;h1&gt;Hello&lt;/h1&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+"""
+
+
+app = Flask("hello")
+
+
+@app.route("/")
+def root():
+    return HELLO
+</code></pre>
+<ul>
+<li>Go to http://127.0.0.1:5000 to view (5000 being <a href="https://flask.palletsprojects.com/">Flask</a>'s default port)<ul>
 <li>Or use <a href="./fetch.py"><code>fetch.py</code></a> to fetch and display data</li>
 </ul>
 </li>
+</ul>
+<pre><code file="fetch.py">"""Fetch HTML from URL and display."""
+
+import argparse
+import httpx
+
+
+HOST = "127.0.0.1"
+PORT = 5000
+RESOURCE = "/"
+
+
+def main():
+    """Main driver."""
+    opt = parse_args()
+    url = f"http://{opt.host}:{opt.port}{opt.resource}"
+    response = httpx.get(url)
+    print(response.status_code)
+    print(response.text)
+
+
+def parse_args():
+    """Parse command-line arguments."""
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--host", type=str, default=HOST, help="server address")
+    parser.add_argument("--port", type=int, default=PORT, help="server port")
+    parser.add_argument("--resource", type=str, default=RESOURCE, help="resource path")
+    return parser.parse_args()
+
+
+if __name__ == "__main__":
+    main()
+</code></pre>
+<ul>
 <li><a href="./server_func.py"><code>server_func.py</code></a> creates the application and configures <a href="../glossary.html#route">routes</a> in a function<ul>
 <li>Get path to staff CSV from <code>DATA</code> <a href="../glossary.html#env-var">environment variable</a></li>
 <li>Read and convert to HTML with <a href="https://pypi.org/project/prettytable/">PrettyTable</a></li>
 </ul>
 </li>
+</ul>
+<pre><code file="server_func.py:create">def create_app():
+    """Build application and configure routes."""
+    app = Flask("func")
+    CORS(app)
+
+    @app.get("/")
+    def root():
+        """Display home page as HTML."""
+        return util.as_html()
+
+    return app
+</code></pre>
+<ul>
 <li><a href="./server_routes.py"><code>server_routes.py</code></a> configures several routes<ul>
 <li>Use <a href="../glossary.html#query-parameter">query parameters</a> in routes to select individual row or column</li>
 <li>Use <a href="https://pola.rs/">Polars</a> to get a <a href="../glossary.html#dataframe">dataframe</a> and <a href="https://flask.palletsprojects.com/">Flask</a> to convert to JSON</li>
 </ul>
 </li>
+</ul>
+<pre><code file="server_routes.py:create">def create_app():
+    """Build application and configure routes."""
+    app = Flask("routes")
+    CORS(app)
+
+    @app.get("/")
+    def root():
+        return util.as_html()
+
+    @app.get("/col/&lt;name&gt;")
+    def column(name):
+        data = util.as_dataframe()
+        return jsonify(list(data[name]))
+
+    @app.get("/row/&lt;staff_id&gt;")
+    def row(staff_id):
+        staff_id = int(staff_id)
+        data = util.as_dataframe()
+        row = data.filter(pl.col("staff_id") == staff_id).row(0, named=True)
+        return jsonify(row)
+
+    return app
+</code></pre>
+<ul>
 <li>Some endpoints return HTML, some return JSON<ul>
 <li>No endpoint should return both</li>
 </ul>
@@ -37,6 +132,35 @@
 </ul>
 </li>
 </ul>
+<pre><code file="server_err.py:create">def create_app():
+    """Build application and configure routes."""
+    app = Flask("err")
+    CORS(app)
+
+    @app.get("/")
+    def root():
+        return util.as_html()
+
+    @app.get("/col/&lt;name&gt;")
+    def column(name):
+        try:
+            data = util.as_dataframe()
+            return jsonify(list(data[name]))
+        except Exception as exc:
+            abort(util.HTTP_400_BAD_REQUEST, str(exc))
+
+    @app.get("/row/&lt;staff_id&gt;")
+    def row(staff_id):
+        try:
+            staff_id = int(staff_id)
+            data = util.as_dataframe()
+            row = data.filter(pl.col("staff_id") == staff_id).row(0, named=True)
+            return jsonify(row)
+        except Exception as exc:
+            abort(util.HTTP_400_BAD_REQUEST, str(exc))
+
+    return app
+</code></pre>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

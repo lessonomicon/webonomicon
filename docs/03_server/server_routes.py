@@ -7,6 +7,7 @@ import polars as pl
 import util
 
 
+# [create]
 def create_app():
     """Build application and configure routes."""
     app = Flask("routes")
@@ -29,3 +30,4 @@ def create_app():
         return jsonify(row)
 
     return app
+# [/create]

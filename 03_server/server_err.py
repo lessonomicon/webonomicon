@@ -7,6 +7,7 @@ import polars as pl
 import util
 
 
+# [create]
 def create_app():
     """Build application and configure routes."""
     app = Flask("err")
@@ -35,3 +36,4 @@ def create_app():
             abort(util.HTTP_400_BAD_REQUEST, str(exc))
 
     return app
+# [/create]

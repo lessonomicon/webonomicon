@@ -63,16 +63,48 @@ echo "testing" | nc 127.0.0.1 5000
 -   [`http_request_headers.txt`](./http_request_headers.txt) shows more realistic request
 
 ```{file="http_request_headers.txt"}
+GET /index.html HTTP/1.1
+Accept: text/html
+Accept-Language: en, fr
+If-Modified-Since: 16-May-2024
 ```
 
 -   [`http_response.txt`](./http_response.txt) shows possible response
 
 ```{file="http_response.txt"}
+HTTP/1.1 200 OK
+Date: Thu, 16 June 2023 12:28:53 GMT
+Content-Type: text/html
+Content-Length: 53
+
+<html>
+<body>
+<h1>Hello, World!</h1>
+</body>
+</html>
 ```
 
 -   [`http_server.py`](./http_server.py) responds to `GET` with same page every time.
 
 ```{file="http_server.py"}
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+PAGE = """<html><body><p>path: {path}</p></body></html>"""
+
+class RequestHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        page = PAGE.format(path=self.path)
+        content = bytes(page, "utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(content)))
+        self.end_headers()
+        self.wfile.write(content)
+
+if __name__ == "__main__":
+    server_address = ("localhost", 5000)
+    server = HTTPServer(server_address, RequestHandler)
+    server.serve_forever()
 ```
 
 [netcat]: https://en.wikipedia.org/wiki/Netcat
