@@ -34,12 +34,15 @@
 <li>To regenerate the sample data, run <code>make datasets</code> to:<ul>
 <li>install the default parameters for <code>snailz</code> in <code>./params</code>, and</li>
 <li>regenerate the sample data in <code>./data</code></li>
+<li>We use <a href="https://www.gnu.org/software/make/">Make</a> to run tasks because every other option proved to be more complicated</li>
 </ul>
 </li>
+<li>Project uses <a href="https://pypi.org/project/mccole/">McCole</a> to generate and check HTML<ul>
 <li>Run <code>make render</code> to regenerate the HTML in <code>./docs</code> from the Markdown files</li>
 <li>Run <code>make lint</code> at any time to check the state of the project</li>
 </ul>
-<p>This project uses <a href="https://www.gnu.org/software/make/">Make</a> to run tasks because every other option proved to be more complicated.</p>
+</li>
+</ul>
 <h2>The Data</h2>
 <p><a href="https://gvwilson.github.io/snailz/">snailz</a> creates synthetic data for a study of mutant snails in the Pacific Northwest.</p>
 <ul>

@@ -18,10 +18,10 @@
 -   To regenerate the sample data, run `make datasets` to:
     -   install the default parameters for `snailz` in `./params`, and
     -   regenerate the sample data in `./data`
--   Run `make render` to regenerate the HTML in `./docs` from the Markdown files
--   Run `make lint` at any time to check the state of the project
-
-This project uses [Make][make] to run tasks because every other option proved to be more complicated.
+    -   We use [Make][make] to run tasks because every other option proved to be more complicated
+-   Project uses [McCole][mccole] to generate and check HTML
+    -   Run `make render` to regenerate the HTML in `./docs` from the Markdown files
+    -   Run `make lint` at any time to check the state of the project
 
 ## The Data
 
@@ -41,6 +41,7 @@ This project uses [Make][make] to run tasks because every other option proved to
 
 [cc_by_nc]: https://creativecommons.org/licenses/by-nc/4.0/
 [make]: https://www.gnu.org/software/make/
+[mccole]: https://pypi.org/project/mccole/
 [mit]: https://opensource.org/license/MIT
 [snailz]: https://gvwilson.github.io/snailz/
 [uv]: https://github.com/astral-sh/uv

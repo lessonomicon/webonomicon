@@ -10,7 +10,7 @@ All contributors must abide by our [Code of Conduct](./CODE_OF_CONDUCT.md).
 -   Create a virtual environment by running `uv venv` in the root directory
 -   Activate it by running `source .venv/bin/activate` in your shell
 -   Install dependencies by running `uv pip install -r pyproject.toml`
--   This project uses [mccole][mccole] to generate HTML and check the project's structure
+-   This project uses [McCole][mccole] to generate HTML and check the project's structure
 -   Run `make` on its own to see a list of common commands
 
 | make task | effect                                   |
@@ -95,7 +95,7 @@ Why is this material free to read?
 [draw-io]: https://www.drawio.com/
 [email]: mailto:gvwilson@third-bit.com
 [jinja]: https://jinja.palletsprojects.com/
-[mccole]: https://github.com/gvwilson/mccole
+[mccole]: https://pypi.org/project/mccole/
 [repo]: https://github.com/gvwilson/web-tutorial
 [pereira-juanan]: https://ikasten.io/
 [uv]: https://github.com/astral-sh/uv
