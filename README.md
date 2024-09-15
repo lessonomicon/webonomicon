@@ -1,6 +1,6 @@
 # The Webonomicon
 
-<p class="subtitle">An Introduction to Web Programming for Weary Data Scientists</p>
+<p class="subtitle">An Introduction to Web Programming for the Cautious and Weary</p>
 
 <div class="row" markdown="1">
   <div class="col-4 center">
@@ -74,9 +74,11 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 1.  [HTML and CSS](./98_htmlcss/index.md)
 1.  [Certificates](./99_cert/index.md)
+1.  [License](./LICENSE.md)
+1.  [Code of Conduct](./CODE_OF_CONDUCT.md)
+1.  [Contributing](./CONTRIBUTING.md)
 1.  [Bibliography](./bibliography.md)
 1.  [Glossary](./glossary.md)
-1.  [Contributing](./CONTRIBUTING.md)
 
 </ol>
 
