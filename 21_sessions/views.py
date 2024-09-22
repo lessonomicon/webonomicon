@@ -18,8 +18,9 @@ def all_staff(data):
 def experiments(data, staff_id):
     return _use_template("experiments.html", data, staff_id=staff_id)
 
+
 def heartbeat(data):
-    return render_template_string("<p>{{ message }}</p>", message=data['message'])
+    return render_template_string("<p>{{ message }}</p>", message=data["message"])
 
 
 def _use_template(template_name, data, **kwargs):

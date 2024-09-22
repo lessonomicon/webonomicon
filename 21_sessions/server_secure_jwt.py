@@ -11,10 +11,10 @@ import models
 import views
 from util import AppException, HTTP_400_BAD_REQUEST, encrypt_password, get_secret
 
-COOKIE_NAME = "wp4ds"
+COOKIE_NAME = "webonomicon"
 HEARTBEAT = {"message": "alive"}
-JWT_SECRET = os.environ.get('JWT_SECRET')
-JWT_ALGORITHM = 'HS256'
+JWT_SECRET = os.environ.get("JWT_SECRET")
+JWT_ALGORITHM = "HS256"
 JWT_EXPIRATION_DELTA = timedelta(hours=1)
 
 def create_app():
@@ -26,16 +26,16 @@ def create_app():
 
     def create_token(staff_id):
         payload = {
-            'exp': datetime.now(timezone.utc) + JWT_EXPIRATION_DELTA,
-            'iat': datetime.now(timezone.utc),
-            'staffId': staff_id
+            "exp": datetime.now(timezone.utc) + JWT_EXPIRATION_DELTA,
+            "iat": datetime.now(timezone.utc),
+            "staffId": staff_id
         }
         return jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)
 
     def decode_token(token):
         try:
             payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])
-            return payload['staffId']
+            return payload["staffId"]
         except jwt.ExpiredSignatureError:
             return None  # Token has expired
         except jwt.InvalidTokenError:
@@ -66,7 +66,7 @@ def create_app():
             return response
 
         token = create_token(staff_id)
-        response.set_cookie(COOKIE_NAME, token, samesite='Lax')
+        response.set_cookie(COOKIE_NAME, token, samesite="Lax")
         return response
 
     @app.get("/exp/<staff_id>")

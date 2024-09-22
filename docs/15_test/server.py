@@ -9,7 +9,7 @@ import views
 from util import AppException, HTTP_400_BAD_REQUEST, encrypt_password, get_secret, make_secret
 
 
-COOKIE_NAME = "wp4ds"
+COOKIE_NAME = "webonomicon"
 HEARTBEAT = {"message": "alive"}
 RANDOM_LEN = 8
 

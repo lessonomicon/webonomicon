@@ -21,7 +21,7 @@ def experiments(data, staff_id):
 
 
 def heartbeat(data):
-    return render_template_string("<p>{{ message }}</p>", message=data['message'])
+    return render_template_string("<p>{{ message }}</p>", message=data["message"])
 
 
 def _use_template(template_name, data, **kwargs):
