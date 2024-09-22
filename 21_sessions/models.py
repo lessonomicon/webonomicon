@@ -75,6 +75,7 @@ def create_session(cookie, staff_id):
     except sqlite3.DatabaseError as exc:
         raise ModelException(str(exc))
 
+
 def get_session(cookie):
     """Get session by cookie."""
     sessions = Table("sessions")
@@ -86,6 +87,7 @@ def get_session(cookie):
         return result["staff_id"] if result else None
     except sqlite3.DatabaseError as exc:
         raise ModelException(str(exc))
+
 
 def delete_session(cookie):
     """Delete a session."""

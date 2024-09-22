@@ -17,7 +17,7 @@ def driver():
 def test_home_page_title(driver):
     driver.get(LOCAL_URL)
     heading = driver.find_element(By.CSS_SELECTOR, "h1")
-    assert heading.text == 'Staff and Experiments'
+    assert heading.text == "Staff and Experiments"
 
 
 def test_home_page_initially_no_experiments(driver):

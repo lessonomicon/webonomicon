@@ -14,7 +14,7 @@ def main():
     """Main driver."""
     opt = parse_args()
     url = f"http://{opt.host}:{opt.port}{opt.resource}"
-    response = httpx.get(url, headers={'Accept-Language': opt.lang})
+    response = httpx.get(url, headers={"Accept-Language": opt.lang})
     print(response.status_code)
     print(response.text)
 

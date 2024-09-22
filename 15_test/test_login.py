@@ -39,7 +39,7 @@ def test_login_with_correct_credentials(driver):
     button.click()
 
     WebDriverWait(driver, 1).until(lambda d: d.execute_script("return document.readyState") == "complete")
-    assert driver.get_cookie("wp4ds") is not None
+    assert driver.get_cookie("webonomicon") is not None
 
 
 def test_login_with_correct_credentials_another_way(driver):
@@ -52,4 +52,4 @@ def test_login_with_correct_credentials_another_way(driver):
     username.send_keys("maria.k")
     password.send_keys("0227")
     click_and_wait(driver, button)
-    assert driver.get_cookie("wp4ds") is not None
+    assert driver.get_cookie("webonomicon") is not None
