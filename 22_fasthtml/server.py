@@ -1,7 +1,9 @@
 """Serve data from data model layer with JWT authentication."""
 
-from fasthtml.common import cookie, fast_app, serve
-from fasthtml.ft import Titled
+from fasthtml.common import fast_app, serve, RedirectResponse
+from starlette.requests import Request
+from fasthtml.ft import Div, P
+
 import jwt
 from datetime import datetime, timedelta, timezone
 import os
@@ -9,6 +11,7 @@ import os
 import models
 import views
 from util import encrypt_password, get_secret
+
 
 
 COOKIE_NAME = "webonomicon"
@@ -50,43 +53,47 @@ def root():
 
 
 @app.post("/login")
-def login_handler():
+async def login_handler(request: Request):
     """Accept password and go back home."""
-    username = request.form["username"]
-    password = request.form["password"]
-    response = make_response(redirect(url_for("root")))
+    form_data = await request.form()
+    username = form_data.get("username")
+    password = form_data.get("password")
 
-    if (not username) or (not password):
-        response.set_cookie(COOKIE_NAME, "", expires=0)
+    if not username or not password:
+        response = RedirectResponse(url="/", status_code=303)
+        response.delete_cookie(COOKIE_NAME)
         return response
 
     password = encrypt_password(secret, password)
     staff_id = models.authenticate(username, password)
+    
     if staff_id is None:
-        response.set_cookie(COOKIE_NAME, "", expires=0)
+        response = RedirectResponse(url="/", status_code=303)
+        response.delete_cookie(COOKIE_NAME)
         return response
 
     token = create_token(staff_id)
-    response.set_cookie(COOKIE_NAME, token, samesite="Lax")
+    response = RedirectResponse(url="/", status_code=303)
+    response.set_cookie(COOKIE_NAME, token, httponly=True, samesite="Lax")
     return response
 
-
 @app.get("/exp/{staff_id}")
-def exp(staff_id):
-    staff_id = int(staff_id)
+async def exp(request: Request, staff_id: int):
     token = request.cookies.get(COOKIE_NAME)
     if not token:
-        return Titled("Not authenticated")
+        return Div(P("Not authenticated. Please log in."))
 
     decoded_staff_id = decode_token(token)
     if decoded_staff_id is None:
-        return Titled("Invalid or expired token")
+        response = RedirectResponse(url="/", status_code=303)
+        response.delete_cookie(COOKIE_NAME)
+        return response
 
     if int(decoded_staff_id) == staff_id:
-        return views.experiments(models.experiments(staff_id), staff_id)
+        experiments_data = models.experiments(staff_id)
+        return views.experiments(experiments_data, staff_id)
     else:
-        return Titled("Not authorized")
-
+        return Div(P("Not authorized to view this staff member's experiments."))
 
 @app.get("/heartbeat")
 def heartbeat():
