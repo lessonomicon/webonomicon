@@ -2,9 +2,13 @@ from fasthtml.ft import *
 
 TITLE = "Staff and Experiments"
 
-def all_staff(data):
+def all_staff(data, staff_id):
     rows = []
+    personal, family = None, None
     for record in data:
+        if record["staff_id"] == staff_id:
+            personal = record["personal"]
+            family = record["family"]
         button = Button(
             "x",
             hx_get=f"/exp/{record['staff_id']}",
@@ -23,7 +27,12 @@ def all_staff(data):
         Head(
             Title(TITLE),
             Link(rel="stylesheet", href="page.css"),
-            Script(src="https://unpkg.com/htmx.org@1.9.4"),
+            Script(src="alpine.js"),
+            Script(src="htmx.js"),
+        ),
+        Div(
+            P(**{"x-show": "username", "x-text": "username"}),
+            **{"x-data": f"{{username: '{personal} {family}'}}"}
         ),
         Body(
             H1(TITLE),

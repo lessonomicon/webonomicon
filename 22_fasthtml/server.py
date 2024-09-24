@@ -48,8 +48,12 @@ secret = get_secret()
 
 
 @app.get("/")
-def root():
-    return views.all_staff(models.all_staff())
+def root(request: Request):
+    staff_id = None
+    token = request.cookies.get(COOKIE_NAME)
+    if token:
+        staff_id = decode_token(token)
+    return views.all_staff(models.all_staff(), staff_id)
 
 
 @app.post("/login")
@@ -77,6 +81,7 @@ async def login_handler(request: Request):
     response.set_cookie(COOKIE_NAME, token, httponly=True, samesite="Lax")
     return response
 
+
 @app.get("/exp/{staff_id}")
 async def exp(request: Request, staff_id: int):
     token = request.cookies.get(COOKIE_NAME)
@@ -94,6 +99,7 @@ async def exp(request: Request, staff_id: int):
         return views.experiments(experiments_data, staff_id)
     else:
         return Div(P("Not authorized to view this staff member's experiments."))
+
 
 @app.get("/heartbeat")
 def heartbeat():
