@@ -4,11 +4,10 @@ TITLE = "Staff and Experiments"
 
 def all_staff(data, staff_id):
     rows = []
-    personal, family = None, None
+    logged_in_user = None
     for record in data:
         if record["staff_id"] == staff_id:
-            personal = record["personal"]
-            family = record["family"]
+            logged_in_user = f"{record['personal']} {record['family']}"
         button = Button(
             "x",
             hx_get=f"/exp/{record['staff_id']}",
@@ -27,15 +26,14 @@ def all_staff(data, staff_id):
         Head(
             Title(TITLE),
             Link(rel="stylesheet", href="page.css"),
-            Script(src="alpine.js"),
             Script(src="htmx.js"),
-        ),
-        Div(
-            P(**{"x-show": "username", "x-text": "username"}),
-            **{"x-data": f"{{username: '{personal} {family}'}}"}
         ),
         Body(
             H1(TITLE),
+            Div(
+                P(f"Welcome, {logged_in_user}"),
+                logout_button(),
+            ) if logged_in_user else None,
             Table(
                 Thead(
                     Tr(
@@ -49,7 +47,7 @@ def all_staff(data, staff_id):
             ),
             Div(id="experiments"),
             Hr(),
-            login_form()
+            login_form() if not logged_in_user else None
         )
     )
 
@@ -84,7 +82,6 @@ def heartbeat(data):
 
 
 def login_form():
-    """Render a simple login form."""
     return Div(
         H2("Login"),
         Form(
@@ -94,4 +91,12 @@ def login_form():
             method="post",
             action="/login"
         )
+    )
+
+
+def logout_button():
+    return Form(
+        Button("Logout", type="submit"),
+        method="post",
+        action="/logout"
     )
