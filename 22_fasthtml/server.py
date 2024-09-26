@@ -106,4 +106,11 @@ def heartbeat():
     return views.heartbeat(HEARTBEAT)
 
 
+@app.post("/logout")
+def logout():
+    response = RedirectResponse(url="/", status_code=302)
+    response.delete_cookie(key="webonomicon")
+    return response
+
+
 serve(port=8000)
