@@ -1,5 +1,11 @@
 # An Hour of JavaScript
 
+> JavaScript is the only language that I'm aware of
+> that people feel they don't need to learn
+> before they start using it.
+>
+> — Douglas Crockford
+
 -   Install [deno][deno] for command-line JavaScript
 
 ## Variables, Types, and Control Flow
