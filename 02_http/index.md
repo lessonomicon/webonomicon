@@ -107,4 +107,11 @@ if __name__ == "__main__":
     server.serve_forever()
 ```
 
+## Summary
+
+<figure id="http-concept-map">
+  <img src="./http_concept_map.svg" alt="concept map of HTTP">
+  <figcaption>Concept Map</figcaption>
+</figure>
+
 [netcat]: https://en.wikipedia.org/wiki/Netcat
