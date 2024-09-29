@@ -93,7 +93,8 @@ if __name__ == "__main__":
 </code></pre>
 <ul>
 <li><a href="./server_routes.py"><code>server_routes.py</code></a> configures several routes<ul>
-<li>Use <a href="../glossary.html#query-parameter">query parameters</a> in routes to select individual row or column</li>
+<li>Use [query parameters][(g:query-parameter) or <a href="../glossary.html#url-fragment">URL fragments</a>
+    to select individual row or column</li>
 <li>Use <a href="https://pola.rs/">Polars</a> to get a <a href="../glossary.html#dataframe">dataframe</a> and <a href="https://flask.palletsprojects.com/">Flask</a> to convert to JSON</li>
 </ul>
 </li>
@@ -161,6 +162,11 @@ if __name__ == "__main__":
 
     return app
 </code></pre>
+<h2>Summary</h2>
+<figure id="server-concept-map">
+<img alt="concept map of Flask server" src="./server_concept_map.svg"/>
+<figcaption>Concept Map</figcaption>
+</figure>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

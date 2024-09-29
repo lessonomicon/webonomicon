@@ -80,7 +80,8 @@ def create_app():
 ```
 
 -   [`server_routes.py`](./server_routes.py) configures several routes
-    -   Use [query parameters](g:query-parameter) in routes to select individual row or column
+    -   Use [query parameters][(g:query-parameter) or [URL fragments](g:url-fragment)
+        to select individual row or column
     -   Use [Polars][polars] to get a [dataframe](g:dataframe) and [Flask][flask] to convert to JSON
 
 ```{file="server_routes.py:create"}
@@ -144,6 +145,13 @@ def create_app():
 
     return app
 ```
+
+## Summary
+
+<figure id="server-concept-map">
+  <img src="./server_concept_map.svg" alt="concept map of Flask server">
+  <figcaption>Concept Map</figcaption>
+</figure>
 
 [flask]: https://flask.palletsprojects.com/
 [polars]: https://pola.rs/
