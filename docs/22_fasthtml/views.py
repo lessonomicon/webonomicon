@@ -1,3 +1,6 @@
+# disable warnings about * import
+# ruff: noqa: F403 F405
+
 from fasthtml.ft import *
 
 TITLE = "Staff and Experiments"

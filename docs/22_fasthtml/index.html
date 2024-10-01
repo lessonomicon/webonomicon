@@ -2,7 +2,7 @@
 
 <html>
 <head>
-<title>Sessions</title>
+<title>FastHTML</title>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <link href="../static/favicon.ico" rel="icon" type="image/x-icon"/>
@@ -10,46 +10,8 @@
 </head>
 <body>
 <main>
-<h1>Sessions</h1>
-<ul>
-<li>Sessions are forgotten when the server restarts<ul>
-<li>But cookie persists, which is confusing</li>
-<li><a href="./server_sessions.py"><code>server_sessions.py</code></a> stores  sessions in SQLite</li>
-</ul>
-</li>
-<li>Store the user's session ID in the database<ul>
-<li>When the user logs in, create a new session and store the session ID as a cookie</li>
-<li>When the user makes a request, check if the session ID in the cookie matches the session ID in the database</li>
-</ul>
-</li>
-<li>Implement session-based authentication using SQLite<ul>
-<li>Create a <code>sessions</code> table in the database to store session IDs and corresponding user IDs</li>
-<li><code>create_session</code>, <code>get_session</code>, and <code>delete_session</code> functions are implemented in <a href="./models.py"><code>models.py</code></a></li>
-</ul>
-</li>
-<li>JSON Web Tokens <a href="https://en.wikipedia.org/wiki/JSON_Web_Token">JWT</a> could be used as an alternative to session-based authentication<ul>
-<li>Lightweight JSON-based authentication mechanism</li>
-<li>Encode and sign user claims as JSON</li>
-<li>Client stores the resulting token</li>
-<li><a href="https://jwt.io">jwt.io</a> allows you to decode, verify and generate JWT.</li>
-</ul>
-</li>
-<li>JWT-based authentication implemented in <a href="./server_secure_jwt.py"><code>server_secure_jwt.py</code></a><ul>
-<li>Uses <code>pyjwt</code> library for JSON Web Token handling</li>
-<li>Generates a token upon successful login, storing staff ID and expiration time</li>
-<li>Token <em>should</em> be set as an HTTP-only cookie for security (when a cookie is marked as HTTP-only, JavaScript can no longer access the cookie using <code>document.cookie</code>, preventing cross-site scripting (XSS) attacks)</li>
-<li>Protected routes (like <code>/exp/&lt;staff_id&gt;</code>) verify the JWT before granting access</li>
-<li>Provides stateless authentication, improving scalability<ul>
-<li>JWTs are stateless, meaning the server doesn't need to store session information.</li>
-<li>This reduces server memory usage and makes scaling easier.</li>
-</ul>
-</li>
-<li>Handles token expiration and invalid tokens</li>
-<li>Uses environment variables for JWT secret</li>
-<li>Once authenticated, you will see the cookie value. Check it in <a href="https://jwt.io">jwt.io</a>.</li>
-</ul>
-</li>
-</ul>
+<h1>FastHTML</h1>
+<p>FIXME: explain changes</p>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

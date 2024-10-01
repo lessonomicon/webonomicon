@@ -20,7 +20,7 @@
 
 ## Summary
 
- id="view-concept-map">
+<figure id="view-concept-map">
   <img src="./view_concept_map.svg" alt="concept map of views in MVC">
   <figcaption>Concept Map</figcaption>
 </figure>

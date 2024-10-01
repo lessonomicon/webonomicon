@@ -80,7 +80,7 @@ def create_app():
 ```
 
 -   [`server_routes.py`](./server_routes.py) configures several routes
-    -   Use [query parameters][(g:query-parameter) or [URL fragments](g:url-fragment)
+    -   Use [query parameters](g:query-parameter) or [URL fragments](g:url-fragment)
         to select individual row or column
     -   Use [Polars][polars] to get a [dataframe](g:dataframe) and [Flask][flask] to convert to JSON
 
