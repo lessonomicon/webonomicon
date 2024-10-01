@@ -48,7 +48,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [A Server](./03_server/index.md): building a server with [Flask][flask]
 1.  [Using a Database](./04_db/index.md): getting data from [SQLite][sqlite] using [PyPika][pypika]
 1.  [Testing the Server](./05_test/index.md): testing the server with [pytest][pytest]
-1.  [Serving HTML](./06_html/index.md): generating HTML with [Jinja][jinja] templates
+1.  [Serving HTML](./06_view/index.md): generating HTML with [Jinja][jinja] templates
 1.  [Using Forms](./07_forms/index.md): sending data to a server
 1.  [An Hour of JavaScript](./08_js/index.md): variables, loops, functions, and callbacks
 1.  [JavaScript in the Browser](./09_browser/index.md): using the language in its native habitat

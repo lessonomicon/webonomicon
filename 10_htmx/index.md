@@ -1,6 +1,6 @@
 # Using HTMX
 
--   Go back to the models, views, and server from [Serving HTML](../06_html/index.md)
+-   Go back to the models, views, and server from [Serving HTML](../06_view/index.md)
     -   Strip out row and column views
     -   Add a button for each row
     -   Styling is ugly, so add a handler for [static files](g:static-file) in [`server.py`](./server.py) as well

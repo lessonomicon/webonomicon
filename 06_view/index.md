@@ -18,6 +18,13 @@
     -   [`server_static_paths.py`](./server_static_paths.py)
     -   `Flask("server", static_folder=Path("../img").absolute(), static_url_path="/static")`
 
+## Summary
+
+ id="view-concept-map">
+  <img src="./view_concept_map.svg" alt="concept map of views in MVC">
+  <figcaption>Concept Map</figcaption>
+</figure>
+
 [flask]: https://flask.palletsprojects.com/
 [htpy]: https://htpy.dev/
 [jinja]: https://jinja.palletsprojects.com/
