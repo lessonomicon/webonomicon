@@ -65,7 +65,8 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Logging and Auditing](./20_log/index.md): keeping of track of what's happened
 1.  [Session](./21_sessions/index.md): persistent sessions and [JWT][jwt]
 1.  [FastHTML](./22_fasthtml/index.md): using a framework
-1.  [Designing a Workflow](./23_workflow/index.md): thinking before coding
+1.  [Caching](./23_cache/index.md): speeding things up
+1.  [Designing a Workflow](./24_workflow/index.md): thinking before coding
 
 </ol>
 
