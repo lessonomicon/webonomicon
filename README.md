@@ -50,23 +50,22 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Testing the Server](./05_test/index.md): testing the server with [pytest][pytest]
 1.  [Serving HTML](./06_view/index.md): generating HTML with [Jinja][jinja] templates
 1.  [Using Forms](./07_forms/index.md): sending data to a server
-1.  [An Hour of JavaScript](./08_js/index.md): variables, loops, functions, and callbacks
-1.  [JavaScript in the Browser](./09_browser/index.md): using the language in its native habitat
-1.  [Using HTMX](./10_htmx/index.md): letting the [htmx][htmx] library do the hard work
-1.  [Database Migration](./11_migrate/index.md): managing database schema changes
-1.  [Permissions](./12_perm/index.md): representing and checking who can do what
-1.  [Authentication](./13_auth/index.md): checking the user's identity
-1.  [Encryption](./14_crypt/index.md): keeping secrets safe
-1.  [Testing in the Browser](./15_test/index.md): using [Selenium][selenium] to test the user interface
-1.  [Dynamic Graphics](./16_graphics/index.md): drawing pictures with [SVG.js][svgjs]
-1.  [A Graphical User Interface](./17_gui/index.md): handling interactivity in the browser
-1.  [Accessibility](./18_access/index.md): because everyone should be comfortable
-1.  [Internationalization](./19_intl/index.md): because everyone should be welcome
-1.  [Logging and Auditing](./20_log/index.md): keeping of track of what's happened
-1.  [Session](./21_sessions/index.md): persistent sessions and [JWT][jwt]
-1.  [FastHTML](./22_fasthtml/index.md): using a framework
-1.  [Caching](./23_cache/index.md): speeding things up
-1.  [Designing a Workflow](./24_workflow/index.md): thinking before coding
+1.  [JavaScript in the Browser](./08_browser/index.md): using the language in its native habitat
+1.  [Using HTMX](./09_htmx/index.md): letting the [htmx][htmx] library do the hard work
+1.  [Database Migration](./10_migrate/index.md): managing database schema changes
+1.  [Permissions](./11_perm/index.md): representing and checking who can do what
+1.  [Authentication](./12_auth/index.md): checking the user's identity
+1.  [Encryption](./13_crypt/index.md): keeping secrets safe
+1.  [Testing in the Browser](./14_test/index.md): using [Selenium][selenium] to test the user interface
+1.  [Dynamic Graphics](./15_graphics/index.md): drawing pictures with [SVG.js][svgjs]
+1.  [A Graphical User Interface](./16_gui/index.md): handling interactivity in the browser
+1.  [Accessibility](./17_access/index.md): because everyone should be comfortable
+1.  [Internationalization](./18_intl/index.md): because everyone should be welcome
+1.  [Logging and Auditing](./19_log/index.md): keeping of track of what's happened
+1.  [Session](./20_sessions/index.md): persistent sessions and [JWT][jwt]
+1.  [FastHTML](./21_fasthtml/index.md): using a framework
+1.  [Caching](./22_cache/index.md): speeding things up
+1.  [Designing a Workflow](./23_workflow/index.md): thinking before coding
 
 </ol>
 
@@ -74,7 +73,8 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 <ol class="appendices" markdown="1">
 
-1.  [HTML and CSS](./98_htmlcss/index.md)
+1.  [HTML and CSS](./97_htmlcss/index.md)
+1.  [An Hour of JavaScript](./98_js/index.md)
 1.  [Certificates](./99_cert/index.md)
 1.  [License](./LICENSE.md)
 1.  [Code of Conduct](./CODE_OF_CONDUCT.md)
