@@ -9,3 +9,10 @@
 -   Add `add_staff` function to [`models.py`](./models.py)
     -   Must have `commit` in `models.add_staff`
     -   Really should check values…
+
+## Summary
+
+<figure id="forms-concept-map">
+  <img src="./forms_concept_map.svg" alt="concept map of HTML forms">
+  <figcaption>Concept Map</figcaption>
+</figure>
