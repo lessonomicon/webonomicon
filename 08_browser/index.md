@@ -33,3 +33,10 @@
     -   Use [`async`](g:js-async) and [`await`](g:js-await) keywords to wait for things
     -   [`server.py`](./server.py) returns [RGB](g:rgb) color components
     -   Use `style` property rather than `setAttribute` because style can have many sub-properties
+
+## Summary
+
+<figure id="browser-concept-map">
+  <img src="./browser_concept_map.svg" alt="concept map of JavaScript in the browser">
+  <figcaption>Concept Map</figcaption>
+</figure>
