@@ -11,7 +11,28 @@
 <body>
 <main>
 <h1>FastHTML</h1>
-<p>FIXME: explain changes</p>
+<ul>
+<li><a href="https://docs.fastht.ml/">FastHTML</a> is a web application framework<ul>
+<li>A single install to get everything we've built in pieces</li>
+</ul>
+</li>
+<li>Recycle our existing <a href="./models.py"><code>models.py</code></a></li>
+<li><a href="./server.py"><code>server.py</code></a> looks pretty much the same<ul>
+<li>Use <code>fast_app()</code> to create the application</li>
+<li>Define a static file directory when we do so</li>
+</ul>
+</li>
+<li>Biggest change is <a href="./views.py"><code>views.py</code></a><ul>
+<li>Create HTML with nested function calls instead of <a href="https://jinja.palletsprojects.com/">Jinja</a> templates</li>
+</ul>
+</li>
+<li>Resulting application doesn't differ much from what we had<ul>
+<li>Might have been easier to build if we'd started with <a href="https://docs.fastht.ml/">FastHTML</a></li>
+<li>HTML-as-functions might feel more natural if we had used that first</li>
+<li>On balance, doesn't feel worth switching (yet)</li>
+</ul>
+</li>
+</ul>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

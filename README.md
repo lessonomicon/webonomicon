@@ -91,6 +91,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 | [Alpine.js][alpine]              | dynamic HTML      |
 | [Beautiful Soup][bs4]            | HTML manipulation |
 | [deno][deno]                     | JavaScript        |
+| [FastHTML][fasthtml]             | web framework     |
 | [Flask][flask]                   | web server        |
 | [Frappe Charts][frappe-charts]   | charts            |
 | [html5validator][html5validator] | validation        |
@@ -109,6 +110,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 [bs4]: https://beautiful-soup-4.readthedocs.io/
 [dash]: https://dash.plotly.com/
 [deno]: https://deno.com/
+[fasthtml]: https://docs.fastht.ml/
 [flask]: https://flask.palletsprojects.com/
 [frappe-charts]: https://frappe.io/charts/docs
 [html5validator]: https://pypi.org/project/html5validator/
