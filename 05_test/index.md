@@ -11,10 +11,7 @@
 
 ## Summary
 
-<figure id="test-concept-map">
-  <img src="./test_concept_map.svg" alt="concept map of testing a server">
-  <figcaption>Concept Map</figcaption>
-</figure>
+[% figure id="test-concept-map" src="./test_concept_map.svg" alt="concept map of testing a server" caption="Concept Map" %]
 
 [flask]: https://flask.palletsprojects.com/
 [httpx]: https://www.python-httpx.org/

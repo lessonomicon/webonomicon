@@ -148,10 +148,7 @@ def create_app():
 
 ## Summary
 
-<figure id="server-concept-map">
-  <img src="./server_concept_map.svg" alt="concept map of Flask server">
-  <figcaption>Concept Map</figcaption>
-</figure>
+[% figure id="server-concept-map" src="./server_concept_map.svg" alt="concept map of Flask server" caption="Concept Map" %]
 
 [flask]: https://flask.palletsprojects.com/
 [polars]: https://pola.rs/

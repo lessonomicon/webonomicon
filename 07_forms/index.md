@@ -12,7 +12,4 @@
 
 ## Summary
 
-<figure id="forms-concept-map">
-  <img src="./forms_concept_map.svg" alt="concept map of HTML forms">
-  <figcaption>Concept Map</figcaption>
-</figure>
+[% figure id="forms-concept-map" src="./forms_concept_map.svg" alt="concept map of HTML forms" caption="Concept Map" %]
