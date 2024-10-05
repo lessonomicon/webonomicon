@@ -1,5 +1,16 @@
 # Using HTMX
 
+## Overview
+
+[% figure
+   id="htmx-concept-map"
+   src="./htmx_concept_map.svg"
+   alt="concept map of HTMX"
+   caption="Concept Map"
+%]
+
+## Outline
+
 -   Go back to the models, views, and server from [Serving HTML](../06_view/index.md)
     -   Strip out row and column views
     -   Add a button for each row
@@ -26,14 +37,5 @@
 -   More common for server to return JSON that a JavaScript library in the browser translates into HTML
 -   But that approach leads to large (slow) libraries in the browser
     -   Unfair to people using mobile, on slow connections, etc.
-
-## Summary
-
-[% figure
-   id="htmx-concept-map"
-   src="./htmx_concept_map.svg"
-   alt="concept map of HTMX"
-   caption="Concept Map"
-%]
 
 [htmx]: https://htmx.org/

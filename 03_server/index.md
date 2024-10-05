@@ -1,5 +1,16 @@
 # A Server
 
+## Overview
+
+[% figure
+   id="server-concept-map"
+   src="./server_concept_map.svg"
+   alt="concept map of Flask server"
+   caption="Concept Map"
+%]
+
+## Outline
+
 -   [`server_hello.py`](./server_hello.py): return HTML
 
 ```{file="server_hello.py"}
@@ -145,15 +156,6 @@ def create_app():
 
     return app
 ```
-
-## Summary
-
-[% figure
-   id="server-concept-map"
-   src="./server_concept_map.svg"
-   alt="concept map of Flask server"
-   caption="Concept Map"
-%]
 
 [flask]: https://flask.palletsprojects.com/
 [polars]: https://pola.rs/

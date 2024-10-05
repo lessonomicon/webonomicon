@@ -25,7 +25,13 @@
 </nav>
 <main>
 <h1>Using a Database</h1>
-<h2>Direct SQL</h2>
+<h2>Overview</h2>
+<figure id="db-concept-map">
+<img alt="concept map of database interaction in Python" src="./db_concept_map.svg"/>
+<figcaption>Concept Map</figcaption>
+</figure>
+<h2>Outline</h2>
+<h3>Direct SQL</h3>
 <ul>
 <li>Use <a href="https://www.sqlite.org/">SQLite</a> database in <code>./data/lab.db</code> instead of CSV file</li>
 <li>Install <code>_dict_factory</code> <a href="../glossary.html#factory-function">factory function</a>
@@ -121,7 +127,7 @@ def row(staff_id):
 <li>Catch SQLite exceptions and raise our own so that our server only has to catch one thing</li>
 <li>Add some more error handling</li>
 </ul>
-<h2>Query Builder</h2>
+<h3>Query Builder</h3>
 <ul>
 <li>Security problem: we're inserting a user-defined name into a query<ul>
 <li>Can't parameterize query on column name</li>
@@ -229,11 +235,6 @@ def row(staff_id):
     except sqlite3.DatabaseError as exc:
         raise ModelException(str(exc))
 </code></pre>
-<h2>Summary</h2>
-<figure id="db-concept-map">
-<img alt="concept map of database interaction in Python" src="./db_concept_map.svg"/>
-<figcaption>Concept Map</figcaption>
-</figure>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

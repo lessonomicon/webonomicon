@@ -1,5 +1,16 @@
 # HTTP
 
+## Overview
+
+[% figure
+   id="http-concept-map"
+   src="./http_concept_map.svg"
+   alt="concept map of HTTP"
+   caption="Concept Map"
+%]
+
+## Outline
+
 -   Typical web application has clients and servers
     -   [Client](g:client) initiates communication by sending a message and waiting for a response
     -   [Server](g:server) waits for requests and then replies to them
@@ -12,7 +23,7 @@
     -   [Port](g:port) is a number in the range 0-65535
     -   Only one process can use a port at a time
 
-## Using Sockets
+### Using Sockets
 
 -   `socketserver` module provides:
     -   `TCPServer` class to manage incoming connections
@@ -51,7 +62,7 @@ if __name__ == "__main__":
 echo "testing" | nc 127.0.0.1 5000
 ```
 
-## HTTP Request and Response
+### HTTP Request and Response
 
 -   [HyperText Transfer Protocol](g:http) (HTTP) is deliberately simple
     -   Send [request](g:http-request) with path, headers, and body
@@ -106,14 +117,5 @@ if __name__ == "__main__":
     server = HTTPServer(server_address, RequestHandler)
     server.serve_forever()
 ```
-
-## Summary
-
-[% figure
-   id="http-concept-map"
-   src="./http_concept_map.svg"
-   alt="concept map of HTTP"
-   caption="Concept Map"
-%]
 
 [netcat]: https://en.wikipedia.org/wiki/Netcat

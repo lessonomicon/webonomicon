@@ -25,6 +25,12 @@
 </nav>
 <main>
 <h1>HTTP</h1>
+<h2>Overview</h2>
+<figure id="http-concept-map">
+<img alt="concept map of HTTP" src="./http_concept_map.svg"/>
+<figcaption>Concept Map</figcaption>
+</figure>
+<h2>Outline</h2>
 <ul>
 <li>Typical web application has clients and servers<ul>
 <li><a href="../glossary.html#client">Client</a> initiates communication by sending a message and waiting for a response</li>
@@ -44,7 +50,7 @@
 </ul>
 </li>
 </ul>
-<h2>Using Sockets</h2>
+<h3>Using Sockets</h3>
 <ul>
 <li><code>socketserver</code> module provides:<ul>
 <li><code>TCPServer</code> class to manage incoming connections</li>
@@ -82,7 +88,7 @@ if __name__ == "__main__":
 </ul>
 <pre class="language-sh"><code class="language-sh" file="send_with_nc.sh">echo "testing" | nc 127.0.0.1 5000
 </code></pre>
-<h2>HTTP Request and Response</h2>
+<h3>HTTP Request and Response</h3>
 <ul>
 <li><a href="../glossary.html#http">HyperText Transfer Protocol</a> (HTTP) is deliberately simple<ul>
 <li>Send <a href="../glossary.html#http-request">request</a> with path, headers, and body</li>
@@ -138,11 +144,6 @@ if __name__ == "__main__":
     server = HTTPServer(server_address, RequestHandler)
     server.serve_forever()
 </code></pre>
-<h2>Summary</h2>
-<figure id="http-concept-map">
-<img alt="concept map of HTTP" src="./http_concept_map.svg"/>
-<figcaption>Concept Map</figcaption>
-</figure>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

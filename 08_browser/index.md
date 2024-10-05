@@ -1,5 +1,16 @@
 # JavaScript in the Browser
 
+## Overview
+
+[% figure
+   id="browser-concept-map"
+   src="./browser_concept_map.svg"
+   alt="concept map of JavaScript in the browser"
+   caption="Concept Map"
+%]
+
+## Outline
+
 -   JavaScript was created to make web pages interactive
     -   Load into page (several ways)
     -   Trigger execution (also several ways)
@@ -33,12 +44,3 @@
     -   Use [`async`](g:js-async) and [`await`](g:js-await) keywords to wait for things
     -   [`server.py`](./server.py) returns [RGB](g:rgb) color components
     -   Use `style` property rather than `setAttribute` because style can have many sub-properties
-
-## Summary
-
-[% figure
-   id="browser-concept-map"
-   src="./browser_concept_map.svg"
-   alt="concept map of JavaScript in the browser"
-   caption="Concept Map"
-%]

@@ -1,5 +1,16 @@
 # Serving HTML
 
+## Overview
+
+[% figure
+   id="view-concept-map"
+   src="./view_concept_map.svg"
+   alt="concept map of views in MVC"
+   caption="Concept Map"
+%]
+
+## Outline
+
 -   Introduce the view part of MVC and use [Jinja][jinja] templates
     -   Alternative [htpy][htpy] is more amenable to debugging but harder to read
 -   Add exceptions to [`util.py`](./util.py)
@@ -17,15 +28,6 @@
 -   The right way to do this is to configure a directory for [static files](g:static-file)
     -   [`server_static_paths.py`](./server_static_paths.py)
     -   `Flask("server", static_folder=Path("../img").absolute(), static_url_path="/static")`
-
-## Summary
-
-[% figure
-   id="view-concept-map"
-   src="./view_concept_map.svg"
-   alt="concept map of views in MVC"
-   caption="Concept Map"
-%]
 
 [flask]: https://flask.palletsprojects.com/
 [htpy]: https://htpy.dev/

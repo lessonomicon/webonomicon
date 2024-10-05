@@ -1,6 +1,17 @@
 # Using a Database
 
-## Direct SQL
+## Overview
+
+[% figure
+   id="db-concept-map"
+   src="./db_concept_map.svg"
+   alt="concept map of database interaction in Python"
+   caption="Concept Map"
+%]
+
+## Outline
+
+### Direct SQL
 
 -   Use [SQLite][sqlite] database in `./data/lab.db` instead of CSV file
 -   Install `_dict_factory` [factory function](g:factory-function)
@@ -93,7 +104,7 @@ def row(staff_id):
 -   Catch SQLite exceptions and raise our own so that our server only has to catch one thing
 -   Add some more error handling
 
-## Query Builder
+### Query Builder
 
 -   Security problem: we're inserting a user-defined name into a query
     -   Can't parameterize query on column name
@@ -201,15 +212,6 @@ def row(staff_id):
     except sqlite3.DatabaseError as exc:
         raise ModelException(str(exc))
 ```
-
-## Summary
-
-[% figure
-   id="db-concept-map"
-   src="./db_concept_map.svg"
-   alt="concept map of database interaction in Python"
-   caption="Concept Map"
-%]
 
 [flask]: https://flask.palletsprojects.com/
 [pony]: https://ponyorm.org/
