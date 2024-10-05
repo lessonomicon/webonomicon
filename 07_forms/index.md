@@ -12,4 +12,9 @@
 
 ## Summary
 
-[% figure id="forms-concept-map" src="./forms_concept_map.svg" alt="concept map of HTML forms" caption="Concept Map" %]
+[% figure
+   id="forms-concept-map"
+   src="./forms_concept_map.svg"
+   alt="concept map of HTML forms"
+   caption="Concept Map"
+%]

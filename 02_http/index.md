@@ -109,6 +109,11 @@ if __name__ == "__main__":
 
 ## Summary
 
-[% figure id="http-concept-map" src="./http_concept_map.svg" alt="concept map of HTTP" caption="Concept Map" %]
+[% figure
+   id="http-concept-map"
+   src="./http_concept_map.svg"
+   alt="concept map of HTTP"
+   caption="Concept Map"
+%]
 
 [netcat]: https://en.wikipedia.org/wiki/Netcat

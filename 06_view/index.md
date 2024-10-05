@@ -14,13 +14,18 @@
     -   Run [`server_paths.py`](./server_paths.py) and go to `/dotdot` to see the effect
     -   So assets need to be in directories below the server's root directory
     -   But `../static/image.png` works because [Flask][flask] removes the leading `../`
--   The right way to do this is to configure a directory for static files
+-   The right way to do this is to configure a directory for [static files](g:static-file)
     -   [`server_static_paths.py`](./server_static_paths.py)
     -   `Flask("server", static_folder=Path("../img").absolute(), static_url_path="/static")`
 
 ## Summary
 
-[% figure id="view-concept-map" src="./view_concept_map.svg" alt="concept map of views in MVC" caption="Concept Map" %]
+[% figure
+   id="view-concept-map"
+   src="./view_concept_map.svg"
+   alt="concept map of views in MVC"
+   caption="Concept Map"
+%]
 
 [flask]: https://flask.palletsprojects.com/
 [htpy]: https://htpy.dev/

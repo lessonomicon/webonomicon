@@ -48,7 +48,7 @@
 <li>But <code>../static/image.png</code> works because <a href="https://flask.palletsprojects.com/">Flask</a> removes the leading <code>../</code></li>
 </ul>
 </li>
-<li>The right way to do this is to configure a directory for static files<ul>
+<li>The right way to do this is to configure a directory for <a href="../glossary.html#static-file">static files</a><ul>
 <li><a href="./server_static_paths.py"><code>server_static_paths.py</code></a></li>
 <li><code>Flask("server", static_folder=Path("../img").absolute(), static_url_path="/static")</code></li>
 </ul>

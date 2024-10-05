@@ -3,7 +3,7 @@
 -   Go back to the models, views, and server from [Serving HTML](../06_view/index.md)
     -   Strip out row and column views
     -   Add a button for each row
-    -   Styling is ugly, so add a handler for [static files](g:static-file) in [`server.py`](./server.py) as well
+    -   Styling is ugly, so add a handler for static files in [`server.py`](./server.py) as well
 -   Add an empty `div` with ID `experiments`
 -   Add `htmx.js` to head of page to use [htmx][htmx]
 -   Modify buttons to use it
@@ -26,5 +26,14 @@
 -   More common for server to return JSON that a JavaScript library in the browser translates into HTML
 -   But that approach leads to large (slow) libraries in the browser
     -   Unfair to people using mobile, on slow connections, etc.
+
+## Summary
+
+[% figure
+   id="htmx-concept-map"
+   src="./htmx_concept_map.svg"
+   alt="concept map of HTMX"
+   caption="Concept Map"
+%]
 
 [htmx]: https://htmx.org/

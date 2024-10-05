@@ -204,7 +204,12 @@ def row(staff_id):
 
 ## Summary
 
-[% figure id="db-concept-map" src="./db_concept_map.svg" alt="concept map of database interaction in Python" caption="Concept Map" %]
+[% figure
+   id="db-concept-map"
+   src="./db_concept_map.svg"
+   alt="concept map of database interaction in Python"
+   caption="Concept Map"
+%]
 
 [flask]: https://flask.palletsprojects.com/
 [pony]: https://ponyorm.org/
