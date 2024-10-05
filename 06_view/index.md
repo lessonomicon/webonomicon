@@ -9,6 +9,8 @@
    caption="Concept Map"
 %]
 
+<p id="terms"></p>
+
 ## Outline
 
 -   Introduce the view part of MVC and use [Jinja][jinja] templates

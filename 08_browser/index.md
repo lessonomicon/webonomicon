@@ -9,6 +9,8 @@
    caption="Concept Map"
 %]
 
+<p id="terms"></p>
+
 ## Outline
 
 -   JavaScript was created to make web pages interactive

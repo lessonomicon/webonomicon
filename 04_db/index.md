@@ -9,6 +9,8 @@
    caption="Concept Map"
 %]
 
+<p id="terms"></p>
+
 ## Outline
 
 ### Direct SQL

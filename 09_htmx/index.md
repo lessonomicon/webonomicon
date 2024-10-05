@@ -9,6 +9,8 @@
    caption="Concept Map"
 %]
 
+<p id="terms"></p>
+
 ## Outline
 
 -   Go back to the models, views, and server from [Serving HTML](../06_view/index.md)

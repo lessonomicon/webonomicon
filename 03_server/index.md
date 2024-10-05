@@ -9,6 +9,8 @@
    caption="Concept Map"
 %]
 
+<p id="terms"></p>
+
 ## Outline
 
 -   [`server_hello.py`](./server_hello.py): return HTML

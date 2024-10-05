@@ -9,6 +9,8 @@
    caption="Concept Map"
 %]
 
+<p id="terms"></p>
+
 ## Outline
 
 -   Add a [heartbeat](g:heartbeat) to [`server.py`](./server.py)
