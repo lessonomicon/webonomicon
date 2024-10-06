@@ -63,9 +63,8 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Internationalization](./18_intl/index.md): because everyone should be welcome
 1.  [Logging and Auditing](./19_log/index.md): keeping of track of what's happened
 1.  [Session](./20_sessions/index.md): persistent sessions and [JWT][jwt]
-1.  [FastHTML](./21_fasthtml/index.md): using a framework
-1.  [Caching](./22_cache/index.md): speeding things up
-1.  [Designing a Workflow](./23_workflow/index.md): thinking before coding
+1.  [Caching](./21_cache/index.md): speeding things up
+1.  [Designing a Workflow](./22_workflow/index.md): thinking before coding
 
 </ol>
 
@@ -73,8 +72,9 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 <ol class="appendices" markdown="1">
 
-1.  [HTML and CSS](./97_htmlcss/index.md)
-1.  [An Hour of JavaScript](./98_js/index.md)
+1.  [HTML and CSS](./96_htmlcss/index.md)
+1.  [An Hour of JavaScript](./97_js/index.md)
+1.  [FastHTML](./98_fasthtml/index.md)
 1.  [Certificates](./99_cert/index.md)
 1.  [License](./LICENSE.md)
 1.  [Code of Conduct](./CODE_OF_CONDUCT.md)
