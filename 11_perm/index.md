@@ -1,5 +1,18 @@
 # Permissions
 
+## Overview
+
+[% figure
+   id="perm-concept-map"
+   src="./perm_concept_map.svg"
+   alt="concept map of permissions"
+   caption="Concept Map"
+%]
+
+<p id="terms"></p>
+
+## Outline
+
 -   Everyone can read everything
     -   Databases like [PostgreSQL][postgresql] implement fine-grained permissions on tables and even rows
     -   But we need to do it ourself for [SQLite][sqlite]
