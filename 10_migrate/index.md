@@ -1,5 +1,18 @@
 # Database Migration
 
+## Overview
+
+[% figure
+   id="migrate-concept-map"
+   src="./migrate_concept_map.svg"
+   alt="concept map of database migration"
+   caption="Concept Map"
+%]
+
+<p id="terms"></p>
+
+## Outline
+
 -   A [database migration](g:db-migration) is a change to the structure of a database
     -   Versus a change to its contents
 -   Use tools like [sqitch][sqitch] to manage these
