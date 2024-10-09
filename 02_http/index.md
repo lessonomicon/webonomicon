@@ -4,7 +4,7 @@
 
 <figure id="http-concept-map">
   <img src="http_concept_map.svg" alt="concept map of HTTP"/>
-  <figcaption>Concept Map</figcaption>
+  <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
 <p id="terms"></p>

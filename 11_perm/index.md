@@ -4,7 +4,7 @@
 
 <figure id="perm-concept-map">
   <img src="perm_concept_map.svg" alt="concept map of permissions"/>
-  <figcaption>Concept Map</figcaption>
+  <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
 <p id="terms"></p>

@@ -4,7 +4,7 @@
 
 <figure id="browser-concept-map">
   <img src="browser_concept_map.svg" alt="concept map of JavaScript in the browser"/>
-  <figcaption>Concept Map</figcaption>
+  <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
 <p id="terms"></p>

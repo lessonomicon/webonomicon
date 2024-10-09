@@ -4,7 +4,7 @@
 
 <figure id="db-concept-map">
   <img src="db_concept_map.svg" alt="concept map of database interaction in Python"/>
-  <figcaption>Concept Map</figcaption>
+  <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
 <p id="terms"></p>

@@ -4,7 +4,7 @@
 
 <figure id="auth-concept-map">
   <img src="auth_concept_map.svg" alt="concept map of authentication"/>
-  <figcaption>Concept Map</figcaption>
+  <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
 <p id="terms"></p>

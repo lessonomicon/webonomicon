@@ -4,7 +4,7 @@
 
 <figure id="htmx-concept-map">
   <img src="htmx_concept_map.svg" alt="concept map of HTMX"/>
-  <figcaption>Concept Map</figcaption>
+  <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
 <p id="terms"></p>

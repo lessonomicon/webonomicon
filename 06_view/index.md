@@ -4,7 +4,7 @@
 
 <figure id="view-concept-map">
   <img src="view_concept_map.svg" alt="concept map of views in MVC"/>
-  <figcaption>Concept Map</figcaption>
+  <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
 <p id="terms"></p>

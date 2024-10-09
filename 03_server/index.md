@@ -4,7 +4,7 @@
 
 <figure id="server-concept-map">
   <img src="server_concept_map.svg" alt="concept map of Flask server"/>
-  <figcaption>Concept Map</figcaption>
+  <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
 
 <p id="terms"></p>
