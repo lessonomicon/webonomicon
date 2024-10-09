@@ -2,12 +2,10 @@
 
 ## Overview
 
-[% figure
-   id="browser-concept-map"
-   src="./browser_concept_map.svg"
-   alt="concept map of JavaScript in the browser"
-   caption="Concept Map"
-%]
+<figure id="browser-concept-map">
+  <img src="browser_concept_map.svg" alt="concept map of JavaScript in the browser"/>
+  <figcaption>Concept Map</figcaption>
+</figure>
 
 <p id="terms"></p>
 
