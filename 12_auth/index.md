@@ -1,5 +1,16 @@
 # Authentication
 
+## Overview
+
+<figure id="auth-concept-map">
+  <img src="auth_concept_map.svg" alt="concept map of authentication"/>
+  <figcaption>Concept Map</figcaption>
+</figure>
+
+<p id="terms"></p>
+
+## Outline
+
 -   Assign everyone staff member a user ID and a 4-digit PIN
 -   Encrypt the PINs
     -   For now use [reversible encryption](g:reversible-encryption)
