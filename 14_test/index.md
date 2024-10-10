@@ -1,5 +1,16 @@
 # Testing in the Browser
 
+## Overview
+
+<figure id="test-concept-map">
+  <img src="test_concept_map.svg" alt="concept map of browser-based testing"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
+
+<p id="terms"></p>
+
+## Outline
+
 -   [Automate the browser](g:browser-automation) with [Selenium][selenium]
     -   [This tutorial][selenium-tutorial] is helpful
 -   [`test_home_page.py`](./test_home_page.py)
