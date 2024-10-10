@@ -73,7 +73,7 @@
 
 * Specifying UTF-8 in HTML:
    - To ensure proper rendering of special characters, you should specify UTF-8 encoding in your HTML:
-     ```html
+     ```
      <meta charset="utf-8">
      ```
    - This tag should be placed in the `<head>` section of your HTML document.
@@ -82,7 +82,7 @@
    - HTML entities like `&copy;` are useful for ensuring compatibility across different encodings and older systems.
    - With UTF-8 encoding (and the proper meta tag), you can directly use Unicode characters like © in your HTML.
    - Example:
-     ```html
+     ```
      <p>&copy; 2024</p>
      <!-- is equivalent to -->
      <p>© 2024</p>

@@ -10,7 +10,7 @@
 
 ## Variables, Types, and Control Flow
 
-``` { .js #console_log.js }
+``` {file="console_log.js"}
 console.log('hello, world');
 ```
 
@@ -19,7 +19,7 @@ console.log('hello, world');
 -   Use the same [dotted notation](g:dotted-notation) as Python
 -   Trailing semi-colon is no longer required but commonly used
 
-``` { .js #loop_if_truthiness.js }
+``` {file="loop_if_truthiness.js"}
 const values = [0, 1, '', 'text', undefined, null, [], [2, 3]];
 for (const val of values) {
     const type = typeof val;
@@ -47,7 +47,7 @@ for (const val of values) {
 
 ## Objects
 
-``` { .js #object_access.js }
+``` {file="object_access.js"}
 const person = {
     'staff_id': 31,
     'personal': 'Loan',
@@ -60,7 +60,7 @@ console.log(`family: ${person['family']}`);
 -   JavaScript objects are (kind of) like Python dictionaries
 -   Create so many of these that keys don't have to be quoted
 
-``` { .js #object_unquoted.js }
+``` {file="object_unquoted.js"}
 const person = {
     staff_id: 31,
     personal: 'Loan',
@@ -71,7 +71,7 @@ console.log(`personal: ${person.personal}`);
 
 -   Can use variables' names and values to construct objects
 
-``` { .js #object_variables_as_fields.js }
+``` {file="object_variables_as_fields.js"}
 const staff_id = 31;
 const personal = 'Loan';
 const family = 'Nguyen';
@@ -85,7 +85,7 @@ console.log(`person: ${JSON.stringify(person)}`);
 
 ## Functions
 
-``` { .js #function_def_and_call.js }
+``` {file="function_def_and_call.js"}
 function limits (values) {
   if (!values.length) {
     return [undefined, undefined];
@@ -111,7 +111,7 @@ console.log(result);
 -   The older `var` is still sometimes used
 -   Functions take parameters, create a scope, etc.
 
-``` { .js #arrow_function.js }
+``` {file="arrow_function.js"}
 const largest = (left, right) => {
     if (left < right) {
         return left;
@@ -127,7 +127,7 @@ console.log(`largest(3, 5) is ${largest(3, 5)}`);
 -   Can define using [arrow notation](g:arrow-notation) and then assign to a variable
 -   Handy in a language that uses lots of little functions
 
-``` { .js #higher_order_func.js }
+``` {file="higher_order_func.js"}
 const values = [1, -3, 5, -7];
 
 const is_positive = values.map(v => v >= 0);
@@ -145,7 +145,7 @@ const print_positive = values.forEach(v => {
 
 ## Asynchronous Operations
 
-``` { .js #promises.js }
+``` {file="promises.js"}
 const middle = Deno.readTextFile('middle.txt');
 console.log(`middle is ${middle}`);
 middle.then(value => {
@@ -157,7 +157,7 @@ middle.then(value => {
 -   Use `.then` method to tell JavaScript what to do when a value becomes available
     -   Use this a lot in web programming so that the browser won't freeze up
 
-``` { .js #await.js }
+``` {file="await.js"}
 const value = await Deno.readTextFile('left.txt');
 console.log(`left value is ${value}`);
 ```
