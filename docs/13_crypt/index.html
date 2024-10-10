@@ -25,6 +25,13 @@
 </nav>
 <main>
 <h1>Encryption</h1>
+<h2>Overview</h2>
+<figure id="crypt-concept-map">
+<img alt="concept map of password encryption" src="crypt_concept_map.svg"/>
+<figcaption>Figure 1: Concept Map</figcaption>
+</figure>
+<p id="terms">Terms defined: <a href="../glossary.html#ciphertext">ciphertext</a>, <a href="../glossary.html#hashing">hashing</a>, <a href="../glossary.html#plaintext">plaintext</a>, <a href="../glossary.html#salt">salt</a>, <a href="../glossary.html#secret">secret</a>, <a href="../glossary.html#session">session</a></p>
+<h2>Outline</h2>
 <ul>
 <li>Never store passwords as <a href="../glossary.html#plaintext">plaintext</a></li>
 <li>Create a migration to encrypt them and save <a href="../glossary.html#ciphertext">ciphertext</a><ul>
@@ -35,7 +42,7 @@
 </ul>
 </li>
 <li><a href="../glossary.html#hashing">Hash</a> the combination of the secret and their password<ul>
-<li>The secret is a salt</li>
+<li>The secret is a <a href="../glossary.html#salt">salt</a></li>
 </ul>
 </li>
 <li>When someone logs in:<ul>

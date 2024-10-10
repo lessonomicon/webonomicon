@@ -36,6 +36,9 @@
 <span id="client">client</span>
 :   FIXME
 
+<span id="cookie">cookie</span>
+:   FIXME
+
 <span id="css-class">CSS class</span>
 :   FIXME
 

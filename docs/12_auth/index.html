@@ -30,22 +30,18 @@
 <img alt="concept map of authentication" src="auth_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#reversible-encryption">reversible encryption</a>, <a href="../glossary.html#salt">salt</a></p>
+<p id="terms">Terms defined: <a href="../glossary.html#cookie">cookie</a></p>
 <h2>Outline</h2>
 <ul>
 <li>Assign everyone staff member a user ID and a 4-digit PIN</li>
-<li>Encrypt the PINs<ul>
-<li>For now use <a href="../glossary.html#reversible-encryption">reversible encryption</a></li>
-<li>Most systems use one-way with a <a href="../glossary.html#salt">salt</a></li>
-</ul>
-</li>
 <li>Generate account data with <a href="./generate_accounts.py"><code>generate_accounts.py</code></a><ul>
 <li>Use a <a href="https://jinja.palletsprojects.com/">Jinja</a> template to produce a SQL file for migration</li>
 <li>Doesn't check for uniqueness of generated usernames</li>
 </ul>
 </li>
 <li><a href="./server.py"><code>server.py</code></a><ul>
-<li>Set the user's staff ID as the cookie value (horribly insecure)</li>
+<li>Set the user's staff ID as the <a href="../glossary.html#cookie">cookie</a></li>
+<li>Horribly insecure (easy to fake)</li>
 <li>Only show experiments to the person who created them</li>
 <li>Handling cookies in JavaScript (or Python) is unpleasant</li>
 </ul>
