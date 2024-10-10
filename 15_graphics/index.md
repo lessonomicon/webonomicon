@@ -1,5 +1,16 @@
 # Dynamic Graphics
 
+## Overview
+
+<figure id="graphics-concept-map">
+  <img src="graphics_concept_map.svg" alt="concept map of graphics and charts in browser"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
+
+<p id="terms"></p>
+
+## Outline
+
 -   [SVG](g:svg) is a widely-used [vector graphics](g:vector-graphics) format
     -   Represent lines, circles, etc. in a notation like HTML
     -   Also represent transformations (move, rescale, etc.)
