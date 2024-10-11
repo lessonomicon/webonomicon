@@ -1,5 +1,16 @@
 # A Graphical User Interface
 
+## Overview
+
+<figure id="gui-concept-map">
+  <img src="gui_concept_map.svg" alt="concept map of GUI in browser"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
+
+<p id="terms"></p>
+
+## Outline
+
 -   Use [Alpine][alpine] to make a graphical editor for plate layouts
     -   What treatment is applied to each cell
     -   Personal details
