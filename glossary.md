@@ -39,6 +39,9 @@
 <span id="cookie">cookie</span>
 :   FIXME
 
+<span id="xss">cross-site scripting (XSS)</span>
+:   FIXME
+
 <span id="css-class">CSS class</span>
 :   FIXME
 
@@ -190,9 +193,6 @@
 :   FIXME see also [vector graphics](g:vector-graphics)
 
 <span id="rgb">red-green-blue (RGB) color</span>
-:   FIXME
-
-<span id="reversible-encryption">reversible encryption</span>
 :   FIXME
 
 <span id="role">role</span>
