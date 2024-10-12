@@ -50,7 +50,7 @@
     width: 100%
 }
 .row > * {
-  flex: 1; /* allow children to grow when space available */
+    flex: 1; /* allow children to grow when space available */
 }
 
 .col-1 { flex-basis: 8.33%; }
@@ -104,15 +104,19 @@ dd:last-of-type {
 
 /* Figures */
 figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 figure img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: var(--height-half-line);
 }
 
 /* Footer */
@@ -192,6 +196,7 @@ pre.language-js {
 /* Output */
 pre.language-out {
     border-color: var(--stamp-brown-light);
+    font-style: italic;
 }
 
 /* Python */
@@ -240,8 +245,8 @@ ul li {
 }
 
 .error-message {
-        color: red;
-        font-weight: bold;
+    color: red;
+    font-weight: bold;
 }
 
 /* Dark mode disabled for now */
