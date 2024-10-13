@@ -1,0 +1,8 @@
+| Name         | Escape Sequence | Character |
+| ------------ | --------------- | --------- |
+| less than    | `&lt;`          | <         |
+| greater than | `&gt;`          | >         |
+| ampersand    | `&amp;`         | &         |
+| copyright    | `&copy;`        | ©         |
+| plus/minus   | `&plusmn;`      | ±         |
+| micro        | `&micro;`       | µ         |

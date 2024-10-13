@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="forms-concept-map">
-  <img src="forms_concept_map.svg" alt="concept map of HTML forms"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="forms-concept-map"
+   src="forms_concept_map.svg"
+   alt="concept map of HTML forms"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

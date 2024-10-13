@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="sessions-concept-map">
-  <img src="sessions_concept_map.svg" alt="concept map of sessions with JWT"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="sessions-concept-map"
+   src="sessions_concept_map.svg"
+   alt="concept map of sessions with JWT"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

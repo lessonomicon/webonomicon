@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="db-concept-map">
-  <img src="db_concept_map.svg" alt="concept map of database interaction in Python"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="db-concept-map"
+   src="db_concept_map.svg"
+   alt="concept map of database interaction in Python"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

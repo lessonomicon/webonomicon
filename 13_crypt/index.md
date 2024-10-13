@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="crypt-concept-map">
-  <img src="crypt_concept_map.svg" alt="concept map of password encryption"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="crypt-concept-map"
+   src="crypt_concept_map.svg"
+   alt="concept map of password encryption"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="gui-concept-map">
-  <img src="gui_concept_map.svg" alt="concept map of GUI in browser"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="gui-concept-map"
+   src="gui_concept_map.svg"
+   alt="concept map of GUI in browser"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

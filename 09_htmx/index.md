@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="htmx-concept-map">
-  <img src="htmx_concept_map.svg" alt="concept map of HTMX"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="htmx-concept-map"
+   src="htmx_concept_map.svg"
+   alt="concept map of HTMX"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

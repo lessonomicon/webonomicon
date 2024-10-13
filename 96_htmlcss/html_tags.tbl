@@ -1,0 +1,16 @@
+| HTML Tag | Used For                |
+| -------- | ----------------------- |
+| `div`    | section in a document   |
+| `h1`     | level-1 heading         |
+| `h2`     | level-2 heading, etc.   |
+| `p`      | paragraph               |
+| `span`   | inline text             |
+| `a`      | hyperlink               |
+| `img`    | reference to image      |
+| `ul`     | unordered list          |
+| `ol`     | ordered (numbered) list |
+| `li`     | list element            |
+| `table`  | table                   |
+| `tr`     | table row               |
+| `th`     | table heading           |
+| `td`     | table data cell         |

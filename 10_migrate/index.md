@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="migrate-concept-map">
-  <img src="migrate_concept_map.svg" alt="concept map of database migration"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="migrate-concept-map"
+   src="migrate_concept_map.svg"
+   alt="concept map of database migration"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="http-concept-map">
-  <img src="http_concept_map.svg" alt="concept map of HTTP"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="http-concept-map"
+   src="http_concept_map.svg"
+   alt="concept map of HTTP"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

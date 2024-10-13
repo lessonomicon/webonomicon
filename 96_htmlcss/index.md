@@ -18,15 +18,11 @@
     must use [escape sequences](g:escape-sequence) to represent them
     -   Written `&name;`
 
-| Name         | Escape Sequence | Character |
-|------------|-----------------|-----------|
-| Less than    | `&lt;`          | < |
-| Greater than | `&gt;`          | > |
-| Ampersand    | `&amp;`         | & |
-| Copyright    | `&copy;`        | © |
-| Plus/minus   | `&plusmn;`      | ± |
-| Micro        | `&micro;`       | µ |
-
+[% table
+   id="htmlcss-escape-characters"
+   tbl="escape_characters.tbl"
+   caption="Table 1: HTML Escape Characters"
+%]
 
 -   Well-formed HTML page has:
     -   `<!DOCTYPE html>` as the first line
@@ -36,22 +32,11 @@
 -   Indentation doesn't matter to the browser (but make source more readable to people)
 -   Use `<!--` and `-->` to start and end comments (which cannot be nested)
 
-| HTML Tag | Used For                |
-| -------- | ----------------------- |
-| `div`    | section in a document   |
-| `h1`     | level-1 heading         |
-| `h2`     | level-2 heading, etc.   |
-| `p`      | paragraph               |
-| `span`   | inline text             |
-| `a`      | hyperlink               |
-| `img`    | reference to image      |
-| `ul`     | unordered list          |
-| `ol`     | ordered (numbered) list |
-| `li`     | list element            |
-| `table`  | table                   |
-| `tr`     | table row               |
-| `th`     | table heading           |
-| `td`     | table data cell         |
+[% table
+   id="htmlcss-html-tags"
+   tbl="html_tags.tbl"
+   caption="Table 2: HTML Tags"
+%]
 
 -   Customize elements with `name="value" [attributes](g:attribute)
 

@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="auth-concept-map">
-  <img src="auth_concept_map.svg" alt="concept map of authentication"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="auth-concept-map"
+   src="auth_concept_map.svg"
+   alt="concept map of authentication"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 

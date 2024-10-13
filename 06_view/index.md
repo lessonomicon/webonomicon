@@ -2,10 +2,12 @@
 
 ## Overview
 
-<figure id="view-concept-map">
-  <img src="view_concept_map.svg" alt="concept map of views in MVC"/>
-  <figcaption>Figure 1: Concept Map</figcaption>
-</figure>
+[% figure
+   id="view-concept-map"
+   src="view_concept_map.svg"
+   alt="concept map of views in MVC"
+   caption="Figure 1: Concept Map"
+%]
 
 <p id="terms"></p>
 
