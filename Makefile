@@ -4,13 +4,6 @@ include common.mk
 
 all: commands
 
-# CSS=-css chota.css
-# CSS=-css neat.css
-# CSS=-css picnic.css
-# CSS=-css pico.css
-# CSS=-css simple.css
-# CSS=-css tacit.css
-CSS=
 HTML_IGNORES = 'Attribute "x-' 'Attribute "@click' 'Attribute "file"'
 
 ## datasets: re-create snailz parameters and datasets
@@ -27,12 +20,12 @@ lint:
 
 ## render: convert to HTML
 render:
-	mccole render ${CSS}
+	mccole render
 	@touch docs/.nojekyll
 
 ## profile: render with profiling
 profile:
-	mccole profile ${CSS}
+	mccole profile
 	@touch docs/.nojekyll
 
 ## serve: serve generated HTML
