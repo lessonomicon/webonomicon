@@ -171,7 +171,7 @@
 </tbody>
 </table>
 <ul>
-<li>Customize elements with `name="value" <a href="../glossary.html#attribute">attributes</a></li>
+<li>Customize elements with <code>name="value"</code> <a href="../glossary.html#attribute">attributes</a></li>
 </ul>
 <pre><code>&lt;h1 align="center"&gt;A Centered Heading&lt;/h1&gt;
 </code></pre>
@@ -183,31 +183,33 @@
 </ul>
 </li>
 </ul>
-<h3>UTF-8 Encoding</h3>
+<h2>UTF-8 Encoding</h2>
 <ul>
-<li>UTF-8 Encoding (Simplified):</li>
-<li>Think of UTF-8 as a universal language for computers to understand and display text.</li>
+<li>UTF-8 encoding (Simplified):<ul>
+<li>Think of UTF-8 as a universal language for computers to understand and display text</li>
 <li>It can handle almost any character from any language in the world, including emojis</li>
-<li>
-<p>When you use UTF-8, you don't have to worry about your text looking weird on different devices or websites.</p>
+<li>When you use UTF-8, you don't have to worry about your text looking weird on different devices or websites</li>
+</ul>
 </li>
-<li>
-<p>Specifying UTF-8 in HTML:</p>
+<li>Specifying UTF-8 in HTML:<ul>
+<li>To ensure proper rendering of special characters, place this in the head of the HTML document</li>
+</ul>
 </li>
-<li>To ensure proper rendering of special characters, you should specify UTF-8 encoding in your HTML:
-     <code>&lt;meta charset="utf-8"&gt;</code></li>
-<li>
-<p>This tag should be placed in the <code>&lt;head&gt;</code> section of your HTML document.</p>
+</ul>
+<pre><code>&lt;meta charset="utf-8"&gt;
+</code></pre>
+<ul>
+<li>HTML Entities vs. Direct Unicode Characters:<ul>
+<li>HTML entities like <code>&amp;copy;</code> are useful for ensuring compatibility across different encodings and older systems</li>
+<li>With UTF-8 encoding (and the proper meta tag), you can directly use Unicode characters like © in your HTML</li>
+</ul>
 </li>
-<li>
-<p>HTML Entities vs. Direct Unicode Characters:</p>
-</li>
-<li>HTML entities like <code>&amp;copy;</code> are useful for ensuring compatibility across different encodings and older systems.</li>
-<li>With UTF-8 encoding (and the proper meta tag), you can directly use Unicode characters like © in your HTML.</li>
-<li>Example:
-     <code>&lt;p&gt;&amp;copy; 2024&lt;/p&gt;
-     &lt;!-- is equivalent to --&gt;
-     &lt;p&gt;© 2024&lt;/p&gt;</code></li>
+</ul>
+<pre><code>&lt;p&gt;&amp;copy; 2024&lt;/p&gt;
+&lt;!-- is equivalent to --&gt;
+&lt;p&gt;© 2024&lt;/p&gt;
+</code></pre>
+<ul>
 <li>Both will render the same in a browser, but the direct Unicode character is more readable in the source code.</li>
 </ul>
 <h2>CSS</h2>
