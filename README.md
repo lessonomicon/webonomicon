@@ -41,7 +41,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 ## Syllabus
 
-<ol class="chapters" markdown="1">
+<div class="chapters" markdown="1">
 
 1.  [Introduction](./01_intro/index.md): what we will learn, how to set up, and the data we will use
 1.  [HTTP](./02_http/index.md): how browsers and server talk to each other
@@ -66,11 +66,11 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Caching](./21_cache/index.md): speeding things up
 1.  [Designing a Workflow](./22_workflow/index.md): thinking before coding
 
-</ol>
+</div>
 
 ##  Appendices
 
-<ol class="appendices" markdown="1">
+<div class="appendices" markdown="1">
 
 1.  [HTML and CSS](./96_htmlcss/index.md)
 1.  [An Hour of JavaScript](./97_js/index.md)
@@ -82,7 +82,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Bibliography](./bibliography.md)
 1.  [Glossary](./glossary.md)
 
-</ol>
+</div>
 
 ## Technologies
 
