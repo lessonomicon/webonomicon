@@ -44,27 +44,29 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 <div class="chapters" markdown="1">
 
 1.  [Introduction](./01_intro/index.md): what we will learn, how to set up, and the data we will use
-1.  [HTTP](./02_http/index.md): how browsers and server talk to each other
-1.  [A Server](./03_server/index.md): building a server with [Flask][flask]
-1.  [Using a Database](./04_db/index.md): getting data from [SQLite][sqlite] using [PyPika][pypika]
-1.  [Testing the Server](./05_test/index.md): testing the server with [pytest][pytest]
-1.  [Serving HTML](./06_view/index.md): generating HTML with [Jinja][jinja] templates
-1.  [Using Forms](./07_forms/index.md): sending data to a server
-1.  [JavaScript in the Browser](./08_browser/index.md): using the language in its native habitat
-1.  [Using HTMX](./09_htmx/index.md): letting the [htmx][htmx] library do the hard work
-1.  [Database Migration](./10_migrate/index.md): managing database schema changes
-1.  [Permissions](./11_perm/index.md): representing and checking who can do what
-1.  [Authentication](./12_auth/index.md): checking the user's identity
-1.  [Encryption](./13_crypt/index.md): keeping secrets safe
-1.  [Testing in the Browser](./14_test/index.md): using [Selenium][selenium] to test the user interface
-1.  [Dynamic Graphics](./15_graphics/index.md): drawing pictures with [SVG.js][svgjs]
-1.  [A Graphical User Interface](./16_gui/index.md): handling interactivity in the browser
-1.  [Accessibility](./17_access/index.md): because everyone should be comfortable
-1.  [Internationalization](./18_intl/index.md): because everyone should be welcome
-1.  [Logging and Auditing](./19_log/index.md): keeping of track of what's happened
-1.  [Session](./20_sessions/index.md): persistent sessions and [JWT][jwt]
-1.  [Caching](./21_cache/index.md): speeding things up
-1.  [Designing a Workflow](./22_workflow/index.md): thinking before coding
+1.  [HTML and CSS](./02_htmlcss/index.md)
+1.  [An Hour of JavaScript](./03_js/index.md)
+1.  [JavaScript in the Browser](./04_browser/index.md): using the language in its native habitat
+1.  [HTTP](./05_http/index.md): how browsers and server talk to each other
+1.  [A Server](./06_server/index.md): building a server with [Flask][flask]
+1.  [Using a Database](./07_db/index.md): getting data from [SQLite][sqlite] using [PyPika][pypika]
+1.  [Testing the Server](./08_test/index.md): testing the server with [pytest][pytest]
+1.  [Serving HTML](./09_view/index.md): generating HTML with [Jinja][jinja] templates
+1.  [Using Forms](./10_forms/index.md): sending data to a server
+1.  [Using HTMX](./11_htmx/index.md): letting the [htmx][htmx] library do the hard work
+1.  [Database Migration](./12_migrate/index.md): managing database schema changes
+1.  [Authentication](./13_auth/index.md): checking the user's identity
+1.  [Testing in the Browser](./14_automate/index.md): using [Selenium][selenium] to test the user interface
+1.  [Encryption](./15_crypt/index.md): keeping secrets safe
+1.  [Uploading Files](./16_upload/index.md): multi-step interactions
+1.  [Permissions](./17_perm/index.md): representing and checking who can do what
+1.  [Accessibility](./18_access/index.md): because everyone should be comfortable
+1.  [A Graphical User Interface](./19_gui/index.md): handling interactivity in the browser
+1.  [Dynamic Graphics](./20_graphics/index.md): drawing pictures with [SVG.js][svgjs]
+1.  [Internationalization](./21_intl/index.md): because everyone should be welcome
+1.  [Sessions](./22_sessions/index.md): persistent sessions and [JWT][jwt]
+1.  [Logging and Auditing](./23_log/index.md): keeping of track of what's happened
+1.  [Caching](./24_cache/index.md): speeding things up
 
 </div>
 
@@ -72,8 +74,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 <div class="appendices" markdown="1">
 
-1.  [HTML and CSS](./96_htmlcss/index.md)
-1.  [An Hour of JavaScript](./97_js/index.md)
+1.  [Designing a Workflow](./97_workflow/index.md)
 1.  [FastHTML](./98_fasthtml/index.md)
 1.  [Certificates](./99_cert/index.md)
 1.  [License](./LICENSE.md)
