@@ -2,12 +2,10 @@
 
 ## Overview
 
-[% figure
-   id="test-concept-map"
-   src="test_concept_map.svg"
-   alt="concept map of browser-based testing"
-   caption="Figure 1: Concept Map"
-%]
+<figure id="test-concept-map">
+  <img src="test_concept_map.svg" alt="concept map of browser-based testing"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
 
 <p id="terms"></p>
 

@@ -61,7 +61,7 @@
 <li><code>TCPServer</code> creates a new handler each time it gets a connection and calls that object's <code>handle</code> method</li>
 <li><a href="./simple_server.py"><code>simple_server.py</code></a> reads up to 1024 bytes of data and returns a message</li>
 </ul>
-<pre class="language-py"><code class="language-py" file="simple_server.py">"""Basic socket server."""
+<pre class="language-py" data-file="simple_server.py"><code class="language-py">"""Basic socket server."""
 
 import socketserver
 
@@ -82,13 +82,11 @@ class MyHandler(socketserver.BaseRequestHandler):
 
 if __name__ == "__main__":
     server = socketserver.TCPServer(SERVER_ADDRESS, MyHandler)
-    server.serve_forever()
-</code></pre>
+    server.serve_forever()</code></pre>
 <ul>
 <li>Use <a href="https://en.wikipedia.org/wiki/Netcat">netcat</a> to open a connection and send some text with <a href="./send_with_nc.sh"><code>send_with_nc.sh</code></a></li>
 </ul>
-<pre class="language-sh"><code class="language-sh" file="send_with_nc.sh">echo "testing" | nc 127.0.0.1 5000
-</code></pre>
+<pre class="language-sh" data-file="send_with_nc.sh"><code class="language-sh">echo "testing" | nc 127.0.0.1 5000</code></pre>
 <h3>HTTP Request and Response</h3>
 <ul>
 <li><a href="../glossary.html#http">HyperText Transfer Protocol</a> (HTTP) is deliberately simple<ul>
@@ -104,15 +102,14 @@ if __name__ == "__main__":
 </li>
 <li><a href="./http_request_headers.txt"><code>http_request_headers.txt</code></a> shows more realistic request</li>
 </ul>
-<pre class="language-txt"><code class="language-txt" file="http_request_headers.txt">GET /index.html HTTP/1.1
+<pre class="language-txt" data-file="http_request_headers.txt"><code class="language-txt">GET /index.html HTTP/1.1
 Accept: text/html
 Accept-Language: en, fr
-If-Modified-Since: 16-May-2024
-</code></pre>
+If-Modified-Since: 16-May-2024</code></pre>
 <ul>
 <li><a href="./http_response.txt"><code>http_response.txt</code></a> shows possible response</li>
 </ul>
-<pre class="language-txt"><code class="language-txt" file="http_response.txt">HTTP/1.1 200 OK
+<pre class="language-txt" data-file="http_response.txt"><code class="language-txt">HTTP/1.1 200 OK
 Date: Thu, 16 June 2023 12:28:53 GMT
 Content-Type: text/html
 Content-Length: 53
@@ -121,12 +118,11 @@ Content-Length: 53
 &lt;body&gt;
 &lt;h1&gt;Hello, World!&lt;/h1&gt;
 &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
+&lt;/html&gt;</code></pre>
 <ul>
 <li><a href="./http_server.py"><code>http_server.py</code></a> responds to <code>GET</code> with same page every time.</li>
 </ul>
-<pre class="language-py"><code class="language-py" file="http_server.py">from http.server import BaseHTTPRequestHandler, HTTPServer
+<pre class="language-py" data-file="http_server.py"><code class="language-py">from http.server import BaseHTTPRequestHandler, HTTPServer
 
 PAGE = """&lt;html&gt;&lt;body&gt;&lt;p&gt;path: {path}&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"""
 
@@ -143,8 +139,7 @@ class RequestHandler(BaseHTTPRequestHandler):
 if __name__ == "__main__":
     server_address = ("localhost", 5000)
     server = HTTPServer(server_address, RequestHandler)
-    server.serve_forever()
-</code></pre>
+    server.serve_forever()</code></pre>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

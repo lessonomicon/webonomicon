@@ -2,12 +2,10 @@
 
 ## Overview
 
-[% figure
-   id="perm-concept-map"
-   src="perm_concept_map.svg"
-   alt="concept map of permissions"
-   caption="Figure 1: Concept Map"
-%]
+<figure id="perm-concept-map">
+  <img src="perm_concept_map.svg" alt="concept map of permissions"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
 
 <p id="terms"></p>
 

@@ -2,12 +2,10 @@
 
 ## Overview
 
-[% figure
-   id="graphics-concept-map"
-   src="graphics_concept_map.svg"
-   alt="concept map of graphics and charts in browser"
-   caption="Figure 1: Concept Map"
-%]
+<figure id="graphics-concept-map">
+  <img src="graphics_concept_map.svg" alt="concept map of graphics and charts in browser"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
 
 <p id="terms"></p>
 

@@ -35,7 +35,7 @@
 <ul>
 <li><a href="./server_hello.py"><code>server_hello.py</code></a>: return HTML</li>
 </ul>
-<pre class="language-py"><code class="language-py" file="server_hello.py">"""Hello server."""
+<pre class="language-py" data-file="server_hello.py"><code class="language-py">"""Hello server."""
 
 from flask import Flask
 
@@ -53,15 +53,14 @@ app = Flask("hello")
 
 @app.route("/")
 def root():
-    return HELLO
-</code></pre>
+    return HELLO</code></pre>
 <ul>
 <li>Go to http://127.0.0.1:5000 to view (5000 being <a href="https://flask.palletsprojects.com/">Flask</a>'s default port)<ul>
 <li>Or use <a href="./fetch.py"><code>fetch.py</code></a> to fetch and display data</li>
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" file="fetch.py">"""Fetch HTML from URL and display."""
+<pre class="language-py" data-file="fetch.py"><code class="language-py">"""Fetch HTML from URL and display."""
 
 import argparse
 import httpx
@@ -91,8 +90,7 @@ def parse_args():
 
 
 if __name__ == "__main__":
-    main()
-</code></pre>
+    main()</code></pre>
 <ul>
 <li><a href="./server_func.py"><code>server_func.py</code></a> creates the application and configures <a href="../glossary.html#route">routes</a> in a function<ul>
 <li>Get path to staff CSV from <code>DATA</code> <a href="../glossary.html#env-var">environment variable</a></li>
@@ -100,7 +98,16 @@ if __name__ == "__main__":
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" file="server_func.py">def create_app():
+<pre class="language-py" data-file="server_func.py" data-keep="create"><code class="language-py">"""Define application in function."""
+
+from flask import Flask
+from flask_cors import CORS
+
+import util
+
+
+# [create]
+def create_app():
     """Build application and configure routes."""
     app = Flask("func")
     CORS(app)
@@ -111,7 +118,7 @@ if __name__ == "__main__":
         return util.as_html()
 
     return app
-</code></pre>
+# [/create]</code></pre>
 <ul>
 <li><a href="./server_routes.py"><code>server_routes.py</code></a> configures several routes<ul>
 <li>Use <a href="../glossary.html#query-parameter">query parameters</a> or <a href="../glossary.html#url-fragment">URL fragments</a>
@@ -120,7 +127,17 @@ if __name__ == "__main__":
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" file="server_routes.py">def create_app():
+<pre class="language-py" data-file="server_routes.py" data-keep="create"><code class="language-py">"""Configure multiple routes."""
+
+from flask import Flask, jsonify
+from flask_cors import CORS
+import polars as pl
+
+import util
+
+
+# [create]
+def create_app():
     """Build application and configure routes."""
     app = Flask("routes")
     CORS(app)
@@ -142,7 +159,7 @@ if __name__ == "__main__":
         return jsonify(row)
 
     return app
-</code></pre>
+# [/create]</code></pre>
 <ul>
 <li>Some endpoints return HTML, some return JSON<ul>
 <li>No endpoint should return both</li>
@@ -154,7 +171,17 @@ if __name__ == "__main__":
 </ul>
 </li>
 </ul>
-<pre class="language-py"><code class="language-py" file="server_err.py">def create_app():
+<pre class="language-py" data-file="server_err.py" data-keep="create"><code class="language-py">"""Handle errors."""
+
+from flask import Flask, abort, jsonify
+from flask_cors import CORS
+import polars as pl
+
+import util
+
+
+# [create]
+def create_app():
     """Build application and configure routes."""
     app = Flask("err")
     CORS(app)
@@ -182,7 +209,7 @@ if __name__ == "__main__":
             abort(util.HTTP_400_BAD_REQUEST, str(exc))
 
     return app
-</code></pre>
+# [/create]</code></pre>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

@@ -2,12 +2,10 @@
 
 ## Overview
 
-[% figure
-   id="http-concept-map"
-   src="http_concept_map.svg"
-   alt="concept map of HTTP"
-   caption="Figure 1: Concept Map"
-%]
+<figure id="http-concept-map">
+  <img src="http_concept_map.svg" alt="concept map of HTTP"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
 
 <p id="terms"></p>
 
@@ -33,11 +31,11 @@
 -   `TCPServer` creates a new handler each time it gets a connection and calls that object's `handle` method
 -   [`simple_server.py`](./simple_server.py) reads up to 1024 bytes of data and returns a message
 
-[%inc simple_server.py %]
+<pre data-file="simple_server.py"></pre>
 
 -   Use [netcat][netcat] to open a connection and send some text with [`send_with_nc.sh`](./send_with_nc.sh)
 
-[%inc send_with_nc.sh %]
+<pre data-file="send_with_nc.sh"></pre>
 
 ### HTTP Request and Response
 
@@ -50,14 +48,14 @@
     -   Protocol version
 -   [`http_request_headers.txt`](./http_request_headers.txt) shows more realistic request
 
-[%inc http_request_headers.txt %]
+<pre data-file="http_request_headers.txt"></pre>
 
 -   [`http_response.txt`](./http_response.txt) shows possible response
 
-[%inc http_response.txt %]
+<pre data-file="http_response.txt"></pre>
 
 -   [`http_server.py`](./http_server.py) responds to `GET` with same page every time.
 
-[%inc http_server.py %]
+<pre data-file="http_server.py"></pre>
 
 [netcat]: https://en.wikipedia.org/wiki/Netcat

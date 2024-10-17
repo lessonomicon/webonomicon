@@ -18,11 +18,7 @@
     must use [escape sequences](g:escape-sequence) to represent them
     -   Written `&name;`
 
-[% table
-   id="htmlcss-escape-characters"
-   tbl="escape_characters.tbl"
-   caption="Table 1: HTML Escape Characters"
-%]
+<div class="table" id="htmlcss-escape-characters" data-tbl="escape_characters.tbl" data-caption="Table 1: HTML Escape Characters"></div>
 
 -   Well-formed HTML page has:
     -   `<!DOCTYPE html>` as the first line
@@ -32,11 +28,7 @@
 -   Indentation doesn't matter to the browser (but make source more readable to people)
 -   Use `<!--` and `-->` to start and end comments (which cannot be nested)
 
-[% table
-   id="htmlcss-html-tags"
-   tbl="html_tags.tbl"
-   caption="Table 2: HTML Tags"
-%]
+<div class="table" id="htmlcss-html-tags" data-tbl="html_tags.tbl" data-caption="Table 2: HTML Tags"></div>
 
 -   Customize elements with `name="value"` [attributes](g:attribute)
 

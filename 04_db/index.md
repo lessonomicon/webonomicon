@@ -2,12 +2,10 @@
 
 ## Overview
 
-[% figure
-   id="db-concept-map"
-   src="db_concept_map.svg"
-   alt="concept map of database interaction in Python"
-   caption="Figure 1: Concept Map"
-%]
+<figure id="db-concept-map">
+  <img src="db_concept_map.svg" alt="concept map of database interaction in Python"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
 
 <p id="terms"></p>
 
@@ -25,7 +23,7 @@
         like [SQLAlchemy][SQLAlchemy], [SQLModel][sqlmodel], or [Pony][pony]
     -   ORMs can be hard to debug and don't perfectly insulate programs from changes to [schema](g:db-schema)
 
-[%inc models_sql.py %]
+<pre data-file="models_sql.py"></pre>
 
 -   Re-create connection each time model is accessed
     -   Creating it once and attaching to the [Flask][flask] app fails because of [multithreading](g:multithreading)
@@ -41,11 +39,11 @@
 -   Use the [PyPika][pypika] [query builder](g:query-builder)
 -   [`pika_demo.py`](./pika_demo.py) is a proof of concept
 
-[%inc pika_demo.py %]
+<pre data-file="pika_demo.py"></pre>
 
 -   [`models_pika.py`](./models_pika.py) is shorter and more readable than the SQL version
 
-[%inc models_pika.py %]
+<pre data-file="models_pika.py"></pre>
 
 [flask]: https://flask.palletsprojects.com/
 [pony]: https://ponyorm.org/
