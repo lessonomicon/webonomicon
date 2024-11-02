@@ -33,9 +33,9 @@
 <p id="terms">Terms defined: <a href="../glossary.html#dataframe">dataframe</a>, <a href="../glossary.html#env-var">environment variable</a>, <a href="../glossary.html#query-parameter">query parameter</a>, <a href="../glossary.html#route">route (in server)</a>, <a href="../glossary.html#url-fragment">URL fragment</a></p>
 <h2>Outline</h2>
 <ul>
-<li><a href="./server_hello.py"><code>server_hello.py</code></a>: return HTML</li>
+<li><a href="./server_hello.py.html"><code>server_hello.py</code></a>: return HTML</li>
 </ul>
-<pre class="language-py" data-file="server_hello.py"><code class="language-py">"""Hello server."""
+<pre class="language-py"><code class="language-py" data-file="server_hello.py">"""Hello server."""
 
 from flask import Flask
 
@@ -53,14 +53,15 @@ app = Flask("hello")
 
 @app.route("/")
 def root():
-    return HELLO</code></pre>
+    return HELLO
+</code></pre>
 <ul>
 <li>Go to http://127.0.0.1:5000 to view (5000 being <a href="https://flask.palletsprojects.com/">Flask</a>'s default port)<ul>
-<li>Or use <a href="./fetch.py"><code>fetch.py</code></a> to fetch and display data</li>
+<li>Or use <a href="./fetch.py.html"><code>fetch.py</code></a> to fetch and display data</li>
 </ul>
 </li>
 </ul>
-<pre class="language-py" data-file="fetch.py"><code class="language-py">"""Fetch HTML from URL and display."""
+<pre class="language-py"><code class="language-py" data-file="fetch.py">"""Fetch HTML from URL and display."""
 
 import argparse
 import httpx
@@ -90,24 +91,16 @@ def parse_args():
 
 
 if __name__ == "__main__":
-    main()</code></pre>
+    main()
+</code></pre>
 <ul>
-<li><a href="./server_func.py"><code>server_func.py</code></a> creates the application and configures <a href="../glossary.html#route">routes</a> in a function<ul>
+<li><a href="./server_func.py.html"><code>server_func.py</code></a> creates the application and configures <a href="../glossary.html#route">routes</a> in a function<ul>
 <li>Get path to staff CSV from <code>DATA</code> <a href="../glossary.html#env-var">environment variable</a></li>
 <li>Read and convert to HTML with <a href="https://pypi.org/project/prettytable/">PrettyTable</a></li>
 </ul>
 </li>
 </ul>
-<pre class="language-py" data-file="server_func.py" data-keep="create"><code class="language-py">"""Define application in function."""
-
-from flask import Flask
-from flask_cors import CORS
-
-import util
-
-
-# [create]
-def create_app():
+<pre class="language-py:keep"><code class="language-py:keep" data-file="server_func.py:keep">def create_app():
     """Build application and configure routes."""
     app = Flask("func")
     CORS(app)
@@ -118,26 +111,16 @@ def create_app():
         return util.as_html()
 
     return app
-# [/create]</code></pre>
+</code></pre>
 <ul>
-<li><a href="./server_routes.py"><code>server_routes.py</code></a> configures several routes<ul>
+<li><a href="./server_routes.py.html"><code>server_routes.py</code></a> configures several routes<ul>
 <li>Use <a href="../glossary.html#query-parameter">query parameters</a> or <a href="../glossary.html#url-fragment">URL fragments</a>
     to select individual row or column</li>
 <li>Use <a href="https://pola.rs/">Polars</a> to get a <a href="../glossary.html#dataframe">dataframe</a> and <a href="https://flask.palletsprojects.com/">Flask</a> to convert to JSON</li>
 </ul>
 </li>
 </ul>
-<pre class="language-py" data-file="server_routes.py" data-keep="create"><code class="language-py">"""Configure multiple routes."""
-
-from flask import Flask, jsonify
-from flask_cors import CORS
-import polars as pl
-
-import util
-
-
-# [create]
-def create_app():
+<pre class="language-py:keep"><code class="language-py:keep" data-file="server_routes.py:keep">def create_app():
     """Build application and configure routes."""
     app = Flask("routes")
     CORS(app)
@@ -159,29 +142,19 @@ def create_app():
         return jsonify(row)
 
     return app
-# [/create]</code></pre>
+</code></pre>
 <ul>
 <li>Some endpoints return HTML, some return JSON<ul>
 <li>No endpoint should return both</li>
 </ul>
 </li>
-<li><a href="./server_err.py"><code>server_err.py</code></a> handles errors<ul>
+<li><a href="./server_err.py.html"><code>server_err.py</code></a> handles errors<ul>
 <li>Check row and column and raise exception if not there</li>
 <li>Rely on <a href="https://flask.palletsprojects.com/">Flask</a> to handle nonexistent routes</li>
 </ul>
 </li>
 </ul>
-<pre class="language-py" data-file="server_err.py" data-keep="create"><code class="language-py">"""Handle errors."""
-
-from flask import Flask, abort, jsonify
-from flask_cors import CORS
-import polars as pl
-
-import util
-
-
-# [create]
-def create_app():
+<pre class="language-py:keep"><code class="language-py:keep" data-file="server_err.py:keep">def create_app():
     """Build application and configure routes."""
     app = Flask("err")
     CORS(app)
@@ -209,7 +182,7 @@ def create_app():
             abort(util.HTTP_400_BAD_REQUEST, str(exc))
 
     return app
-# [/create]</code></pre>
+</code></pre>
 </main>
 <footer>
 <a href="../">The Webonomicon</a>

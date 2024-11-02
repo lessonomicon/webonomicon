@@ -6,6 +6,11 @@ all: commands
 
 HTML_IGNORES = 'Attribute "x-' 'Attribute "@click' 'Attribute "file"'
 
+## build: build HTML
+build:
+	mccole build
+	@touch docs/.nojekyll
+
 ## datasets: re-create snailz parameters and datasets
 datasets:
 	snailz params --outdir params
@@ -18,15 +23,14 @@ lint:
 	@html5validator --root docs --blacklist templates --ignore ${HTML_IGNORES} \
 	&& echo "HTML checks passed."
 
-## render: convert to HTML
-render:
-	mccole render
-	@touch docs/.nojekyll
-
 ## profile: render with profiling
 profile:
 	mccole profile
 	@touch docs/.nojekyll
+
+## refresh: refresh all file inclusions
+refresh:
+	mccole refresh --files *_*/index.md
 
 ## serve: serve generated HTML
 serve:

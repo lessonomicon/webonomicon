@@ -35,7 +35,7 @@ before they start using it.</p>
 <li>Install <a href="https://deno.com/">deno</a> for command-line JavaScript</li>
 </ul>
 <h2>Variables, Types, and Control Flow</h2>
-<pre><code file="console_log.js">console.log('hello, world');
+<pre class="language-js"><code class="language-js" data-file="console_log.js">console.log('hello, world');
 </code></pre>
 <ul>
 <li>Run program as <code>deno run program.js</code></li>
@@ -43,7 +43,7 @@ before they start using it.</p>
 <li>Use the same <a href="../glossary.html#dotted-notation">dotted notation</a> as Python</li>
 <li>Trailing semi-colon is no longer required but commonly used</li>
 </ul>
-<pre><code file="loop_if_truthiness.js">const values = [0, 1, '', 'text', undefined, null, [], [2, 3]];
+<pre class="language-js"><code class="language-js" data-file="loop_if_truthiness.js">const values = [0, 1, '', 'text', undefined, null, [], [2, 3]];
 for (const val of values) {
     const type = typeof val;
     if (val) {
@@ -73,7 +73,7 @@ for (const val of values) {
 <li>Otherwise JavaScript does some strange type conversions</li>
 </ul>
 <h2>Objects</h2>
-<pre><code file="object_access.js">const person = {
+<pre class="language-js"><code class="language-js" data-file="object_access.js">const person = {
     'staff_id': 31,
     'personal': 'Loan',
     'family': 'Nguyen'
@@ -85,7 +85,7 @@ console.log(`family: ${person['family']}`);
 <li>JavaScript objects are (kind of) like Python dictionaries</li>
 <li>Create so many of these that keys don't have to be quoted</li>
 </ul>
-<pre><code file="object_unquoted.js">const person = {
+<pre class="language-js"><code class="language-js" data-file="object_unquoted.js">const person = {
     staff_id: 31,
     personal: 'Loan',
     family: 'Nguyen'
@@ -95,7 +95,7 @@ console.log(`personal: ${person.personal}`);
 <ul>
 <li>Can use variables' names and values to construct objects</li>
 </ul>
-<pre><code file="object_variables_as_fields.js">const staff_id = 31;
+<pre class="language-js"><code class="language-js" data-file="object_variables_as_fields.js">const staff_id = 31;
 const personal = 'Loan';
 const family = 'Nguyen';
 const person = {staff_id, personal, family};
@@ -107,7 +107,7 @@ console.log(`person: ${JSON.stringify(person)}`);
 <li>Without this, <code>person</code> is displayed as <code>[Object object]</code></li>
 </ul>
 <h2>Functions</h2>
-<pre><code file="function_def_and_call.js">function limits (values) {
+<pre class="language-js"><code class="language-js" data-file="function_def_and_call.js">function limits (values) {
   if (!values.length) {
     return [undefined, undefined];
   }
@@ -132,7 +132,7 @@ console.log(result);
 <li>The older <code>var</code> is still sometimes used</li>
 <li>Functions take parameters, create a scope, etc.</li>
 </ul>
-<pre><code file="arrow_function.js">const largest = (left, right) =&gt; {
+<pre class="language-js"><code class="language-js" data-file="arrow_function.js">const largest = (left, right) =&gt; {
     if (left &lt; right) {
         return left;
     } else {
@@ -147,7 +147,7 @@ console.log(`largest(3, 5) is ${largest(3, 5)}`);
 <li>Can define using <a href="../glossary.html#arrow-notation">arrow notation</a> and then assign to a variable</li>
 <li>Handy in a language that uses lots of little functions</li>
 </ul>
-<pre><code file="higher_order_func.js">const values = [1, -3, 5, -7];
+<pre class="language-js"><code class="language-js" data-file="higher_order_func.js">const values = [1, -3, 5, -7];
 
 const is_positive = values.map(v =&gt; v &gt;= 0);
 console.log(`is_positive: ${is_positive}`);
@@ -162,7 +162,7 @@ const print_positive = values.forEach(v =&gt; {
 });
 </code></pre>
 <h2>Asynchronous Operations</h2>
-<pre><code file="promises.js">const middle = Deno.readTextFile('middle.txt');
+<pre class="language-js"><code class="language-js" data-file="promises.js">const middle = Deno.readTextFile('middle.txt');
 console.log(`middle is ${middle}`);
 middle.then(value =&gt; {
     console.log(`middle.then is ${value}`);
@@ -175,7 +175,7 @@ middle.then(value =&gt; {
 </ul>
 </li>
 </ul>
-<pre><code file="await.js">const value = await Deno.readTextFile('left.txt');
+<pre class="language-js"><code class="language-js" data-file="await.js">const value = await Deno.readTextFile('left.txt');
 console.log(`left value is ${value}`);
 </code></pre>
 <ul>

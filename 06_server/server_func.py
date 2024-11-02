@@ -6,7 +6,7 @@ from flask_cors import CORS
 import util
 
 
-# [create]
+# [keep]
 def create_app():
     """Build application and configure routes."""
     app = Flask("func")
@@ -18,4 +18,4 @@ def create_app():
         return util.as_html()
 
     return app
-# [/create]
+# [/keep]

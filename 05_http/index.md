@@ -31,11 +31,36 @@
 -   `TCPServer` creates a new handler each time it gets a connection and calls that object's `handle` method
 -   [`simple_server.py`](./simple_server.py) reads up to 1024 bytes of data and returns a message
 
-<pre data-file="simple_server.py"></pre>
+```{data-file="simple_server.py"}
+"""Basic socket server."""
+
+import socketserver
+
+
+CHUNK_SIZE = 1024
+SERVER_ADDRESS = ("localhost", 5000)
+
+
+class MyHandler(socketserver.BaseRequestHandler):
+    def handle(self):
+        data = self.request.recv(CHUNK_SIZE)
+        cli = self.client_address[0]
+        msg = f"server received {len(data)} bytes from {cli}"
+        print(msg)
+        print(data)
+        self.request.sendall(bytes(msg, "utf-8"))
+
+
+if __name__ == "__main__":
+    server = socketserver.TCPServer(SERVER_ADDRESS, MyHandler)
+    server.serve_forever()
+```
 
 -   Use [netcat][netcat] to open a connection and send some text with [`send_with_nc.sh`](./send_with_nc.sh)
 
-<pre data-file="send_with_nc.sh"></pre>
+```{data-file="send_with_nc.sh"}
+echo "testing" | nc 127.0.0.1 5000
+```
 
 ### HTTP Request and Response
 
@@ -48,14 +73,49 @@
     -   Protocol version
 -   [`http_request_headers.txt`](./http_request_headers.txt) shows more realistic request
 
-<pre data-file="http_request_headers.txt"></pre>
+```{data-file="http_request_headers.txt"}
+GET /index.html HTTP/1.1
+Accept: text/html
+Accept-Language: en, fr
+If-Modified-Since: 16-May-2024
+```
 
 -   [`http_response.txt`](./http_response.txt) shows possible response
 
-<pre data-file="http_response.txt"></pre>
+```{data-file="http_response.txt"}
+HTTP/1.1 200 OK
+Date: Thu, 16 June 2023 12:28:53 GMT
+Content-Type: text/html
+Content-Length: 53
+
+<html>
+<body>
+<h1>Hello, World!</h1>
+</body>
+</html>
+```
 
 -   [`http_server.py`](./http_server.py) responds to `GET` with same page every time.
 
-<pre data-file="http_server.py"></pre>
+```{data-file="http_server.py"}
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+PAGE = """<html><body><p>path: {path}</p></body></html>"""
+
+class RequestHandler(BaseHTTPRequestHandler):
+    def do_GET(self):
+        page = PAGE.format(path=self.path)
+        content = bytes(page, "utf-8")
+        self.send_response(200)
+        self.send_header("Content-Type", "text/html; charset=utf-8")
+        self.send_header("Content-Length", str(len(content)))
+        self.end_headers()
+        self.wfile.write(content)
+
+if __name__ == "__main__":
+    server_address = ("localhost", 5000)
+    server = HTTPServer(server_address, RequestHandler)
+    server.serve_forever()
+```
 
 [netcat]: https://en.wikipedia.org/wiki/Netcat

@@ -75,4 +75,3 @@ def row(staff_id):
         return result[0]
     except sqlite3.DatabaseError as exc:
         raise ModelException(str(exc))
-

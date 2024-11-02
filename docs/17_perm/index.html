@@ -67,18 +67,18 @@
 <li>But this means we can't distinguish "no data" from "no permission"</li>
 </ul>
 </li>
-<li><a href="./explore_permissions.py"><code>explore_permissions.py</code></a> explores ways to do what we want with <a href="https://pypika.readthedocs.io/">PyPika</a><ul>
+<li><a href="./explore_permissions.py.html"><code>explore_permissions.py</code></a> explores ways to do what we want with <a href="https://pypika.readthedocs.io/">PyPika</a><ul>
 <li>Turns out that <code>join</code> must have <code>on</code></li>
 <li>Since we want everything, use <code>x == x</code></li>
 </ul>
 </li>
 <li>Having explored ideas in the small, we can implement in the large<ul>
-<li><a href="./test_json.py"><code>test_json.py</code></a> uses a custom <a href="https://pypika.readthedocs.io/">PyPika</a> function to call SQLite's <code>json_group_array</code></li>
+<li><a href="./test_json.py.html"><code>test_json.py</code></a> uses a custom <a href="https://pypika.readthedocs.io/">PyPika</a> function to call SQLite's <code>json_group_array</code></li>
 <li>Name the JSON field <code>something__json</code></li>
 <li>Modify <code>dict_factory</code> to unpack and rename</li>
 </ul>
 </li>
-<li>Go back to <a href="./test_permissions.py"><code>test_permissions.py</code></a> and add tests using this<ul>
+<li>Go back to <a href="./test_permissions.py.html"><code>test_permissions.py</code></a> and add tests using this<ul>
 <li>Hard to understand without building it up in steps, but it works</li>
 </ul>
 </li>
