@@ -17,6 +17,9 @@
 <span id="attribute">attribute</span>
 :   FIXME
 
+<span id="auditing">auditing</span>
+:   FIXME
+
 `await` (keyword in JavaScript)
 :   See [JavaScript `await` keyword](g:js-await)
 
@@ -26,6 +29,9 @@
 :   FIXME
 
 ## C
+
+<span id="cache">cache</span>
+:   FIXME
 
 <span id="css">Cascading Style Sheets (CSS)</span>
 :   FIXME
@@ -148,6 +154,12 @@
 ## L
 
 <span id="l10n">Localization (l10n)</span>
+:   FIXME
+
+<span id="log">log</span>
+:   FIXME
+
+<span id="logging">logging</span>
 :   FIXME
 
 ## M

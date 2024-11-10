@@ -1,5 +1,7 @@
 # Internationalization
 
+<p id="terms"></p>
+
 -   [Internationalization](g:i18n) (often abbreviated "i18n" because of the number of letters)
     is the preparation of software for multilingual support
 -   [Localization](g:l10n) (often abbreviated "l10n") is the process of making internationalized software accessible

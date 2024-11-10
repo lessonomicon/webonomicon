@@ -1,5 +1,7 @@
 # FastHTML
 
+<p id="terms"></p>
+
 -   [FastHTML][fasthtml] is a web application framework
     -   A single install to get everything we've built in pieces
 -   Recycle our existing [`models.py`](./models.py)

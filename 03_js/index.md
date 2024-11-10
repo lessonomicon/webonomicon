@@ -6,6 +6,8 @@
 >
 > — Douglas Crockford
 
+<p id="terms"></p>
+
 -   Install [deno][deno] for command-line JavaScript
 
 ## Variables, Types, and Control Flow

@@ -1,3 +1,5 @@
 # Caching
 
-FIXME: add a cache and explain why caching is hard
+<p id="terms"></p>
+
+FIXME: add a [cache](g:cache) and explain why caching is hard

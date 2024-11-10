@@ -1,5 +1,7 @@
 # HTML and CSS
 
+<p id="terms"></p>
+
 -   [HyperText Markup Language](g:html) (HTML) is the standard way to represent documents on the web
 -   [Cascading Style Sheets](g:css) (CSS) is the standard way to style them
 -   Both are more complicated than they should have been but we need to understand a bit of both

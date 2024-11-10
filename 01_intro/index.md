@@ -1,5 +1,7 @@
 # Introduction
 
+<p id="terms"></p>
+
 -   Sooner or later you're going to want to share your findings
 -   And learning how the web works is fun
 -   Use modern Python and JavaScript tools

@@ -1,6 +1,6 @@
 # Designing a Workflow
 
--   A [workflow](g:workflow) is a series of steps something has to go through
+<p id="terms"></p>
 
 ## Examples
 

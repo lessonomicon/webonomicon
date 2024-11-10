@@ -1,9 +1,11 @@
 # Logging and Auditing
 
--   Introduction to logging and auditing
+<p id="terms"></p>
+
+-   Introduction to [logging](g:logging) and [auditing](g:auditing)
     -   Importance in web applications
     -   Difference between logging and auditing
--   Logging
+-   Logging creates a [log](g:log)
     -   Purpose: debugging, monitoring, error tracking
     -   Python's built-in logging module
     -   Configuring log levels (DEBUG, INFO, WARNING, ERROR, CRITICAL)
