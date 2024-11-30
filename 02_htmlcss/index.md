@@ -1,6 +1,15 @@
 # HTML and CSS
 
+## Overview
+
+<figure id="htmlcss-concept-map">
+  <img src="htmlcss_concept_map.svg" alt="concept map of HTML and CSS"/>
+  <figcaption>Figure 1: Concept Map</figcaption>
+</figure>
+
 <p id="terms"></p>
+
+## Introduction
 
 -   [HyperText Markup Language](g:html) (HTML) is the standard way to represent documents on the web
 -   [Cascading Style Sheets](g:css) (CSS) is the standard way to style them
