@@ -45,5 +45,5 @@
 [make]: https://www.gnu.org/software/make/
 [mccole]: https://pypi.org/project/mccole/
 [mit]: https://opensource.org/license/MIT
-[snailz]: https://gvwilson.github.io/snailz/
+[snailz]: https://lessonomicon.github.io/snailz/
 [uv]: https://github.com/astral-sh/uv

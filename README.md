@@ -125,7 +125,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 [prettytable]: https://pypi.org/project/prettytable/
 [pypika]: https://pypika.readthedocs.io/
 [pytest]: https://docs.pytest.org/
-[repo]: https://github.com/gvwilson/web-tutorial
+[repo]: https://github.com/lessonomicon/webonomicon
 [selenium]: https://pypi.org/project/selenium/
 [sqlite]: https://www.sqlite.org/
 [svgjs]: https://svgjs.dev/

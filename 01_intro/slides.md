@@ -40,6 +40,6 @@ and received ACM SIGSOFT's Influential Educator Award in 2020.
 
 [cc_by_nc]: https://creativecommons.org/licenses/by-nc/4.0/
 [mit]: https://opensource.org/license/MIT
-[repo]: https://github.com/gvwilson/web-tutorial
-[site]: https://gvwilson.github.io/web-tutorial
+[repo]: https://github.com/lessonomicon/webonomicon
+[site]: https://lessonomicon.github.io/webonomicon
 [wilson-greg]: https://third-bit.com/
