@@ -30,7 +30,7 @@
 <img alt="concept map of HTML and CSS" src="htmlcss_concept_map.svg"/>
 <figcaption>Figure 1: Concept Map</figcaption>
 </figure>
-<p id="terms">Terms defined: <a href="../glossary.html#attribute">attribute</a>, <a href="../glossary.html#css">Cascading Style Sheets (CSS)</a>, <a href="../glossary.html#css-class">CSS class</a>, <a href="../glossary.html#css-variable">CSS variable</a>, <a href="../glossary.html#element">element (in HTML)</a>, <a href="../glossary.html#escape-sequence">escape sequence</a>, <a href="../glossary.html#external-style-sheet">external style sheet</a>, <a href="../glossary.html#html">HyperText Markup Language (HTML)</a>, <a href="../glossary.html#root-element">root element</a>, <a href="../glossary.html#tag">tag</a></p>
+<p id="terms">Terms defined: <a href="../glossary.html#attribute">attribute</a>, <a href="../glossary.html#css">Cascading Style Sheets (CSS)</a>, <a href="../glossary.html#css-class">CSS class</a>, <a href="../glossary.html#css-variable">CSS variable</a>, <a href="../glossary.html#element">element (in HTML)</a>, <a href="../glossary.html#escape-sequence">escape sequence</a>, <a href="../glossary.html#external-style-sheet">external style sheet</a>, <a href="../glossary.html#html">HyperText Markup Language (HTML)</a>, <a href="../glossary.html#pseudo-element">pseudo-element</a>, <a href="../glossary.html#root-element">root element</a>, <a href="../glossary.html#tag">tag</a></p>
 <h2>Introduction</h2>
 <ul>
 <li><a href="../glossary.html#html">HyperText Markup Language</a> (HTML) is the standard way to represent documents on the web</li>
@@ -125,6 +125,40 @@
 </ul>
 </li>
 <li>Can define <a href="../glossary.html#css-variable">CSS variables</a> or style things directly</li>
+</ul>
+<pre class="language-css"><code class="language-css" data-file="styled_page.css">:root {
+    --extra-space: 5px;
+    --page-width: 40em;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: var(--page-width);
+    border: 1px solid gray;
+    margin: var(--extra-space);
+    padding: var(--extra-space);
+}
+
+h1.title {
+    text-align: center;
+}
+
+span.keyword {
+    font-weight: bold;
+}
+</code></pre>
+<ul>
+<li>Simple rule like the one for <code>body</code> has the name of the tag and some properties in curly braces</li>
+<li>More complex rule has <code>tag.class</code> and properties<ul>
+<li>Can also use <code>tag#identifier</code> to select a specific element with an <code>id</code> property</li>
+<li>Or <code>.class</code> or <code>#identifier</code></li>
+</ul>
+</li>
+<li>The <code>:root</code> <a href="../glossary.html#pseudo-element">pseudo-element</a> lets us define global variables<ul>
+<li>Names must begin with two dashes <code>--</code></li>
+<li>Refer to their values using <code>var(name)</code></li>
+</ul>
+</li>
 </ul>
 </main>
 <footer>

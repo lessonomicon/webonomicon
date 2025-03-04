@@ -188,6 +188,9 @@
 <span id="promise">promise</span>
 :   FIXME
 
+<span id="pseudo-element">pseudo-element</span>
+:   FIXME
+
 ## Q
 
 <span id="query-builder">query builder</span>

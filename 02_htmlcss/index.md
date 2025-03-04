@@ -75,7 +75,7 @@
 <p>© 2024</p>
 ```
 
-- Both will render the same in a browser, but the direct Unicode character is more readable in the source code.
+-   Both will render the same in a browser, but the direct Unicode character is more readable in the source code.
 
 ## CSS
 
@@ -86,3 +86,34 @@
     [`styled_page.css`](./styled_page.css)
     -   Which can be shared by many pages
 -   Can define [CSS variables](g:css-variable) or style things directly
+
+```{data-file="styled_page.css"}
+:root {
+    --extra-space: 5px;
+    --page-width: 40em;
+}
+
+body {
+    font-family: sans-serif;
+    max-width: var(--page-width);
+    border: 1px solid gray;
+    margin: var(--extra-space);
+    padding: var(--extra-space);
+}
+
+h1.title {
+    text-align: center;
+}
+
+span.keyword {
+    font-weight: bold;
+}
+```
+
+-   Simple rule like the one for `body` has the name of the tag and some properties in curly braces
+-   More complex rule has `tag.class` and properties
+    -   Can also use `tag#identifier` to select a specific element with an `id` property
+    -   Or `.class` or `#identifier`
+-   The `:root` [pseudo-element](g:pseudo-element) lets us define global variables
+    -   Names must begin with two dashes `--`
+    -   Refer to their values using `var(name)`
