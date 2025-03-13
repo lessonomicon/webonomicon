@@ -59,13 +59,13 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 1.  [Testing in the Browser](./14_automate/index.md): using [Selenium][selenium] to test the user interface
 1.  [Encryption](./15_crypt/index.md): keeping secrets safe
 1.  [Uploading Files](./16_upload/index.md): multi-step interactions
-1.  [Permissions](./17_perm/index.md): representing and checking who can do what
-1.  [Accessibility](./18_access/index.md): because everyone should be comfortable
-1.  [A Graphical User Interface](./19_gui/index.md): handling interactivity in the browser
-1.  [Dynamic Graphics](./20_graphics/index.md): drawing pictures with [SVG.js][svgjs]
-1.  [Internationalization](./21_intl/index.md): because everyone should be welcome
-1.  [Sessions](./22_sessions/index.md): persistent sessions and [JWT][jwt]
-1.  [Logging and Auditing](./23_log/index.md): keeping of track of what's happened
+1.  [Logging and Auditing](./17_log/index.md): keeping of track of what's happened
+1.  [Permissions](./18_perm/index.md): representing and checking who can do what
+1.  [Accessibility](./19_access/index.md): because everyone should be comfortable
+1.  [A Graphical User Interface](./20_gui/index.md): handling interactivity in the browser
+1.  [Dynamic Graphics](./21_graphics/index.md): drawing pictures with [SVG.js][svgjs]
+1.  [Internationalization](./22_intl/index.md): because everyone should be welcome
+1.  [Sessions](./23_sessions/index.md): persistent sessions and [JWT][jwt]
 1.  [Caching](./24_cache/index.md): speeding things up
 
 </div>

@@ -20,14 +20,15 @@ dependencies = [
     "python-multipart",
     "ruff",
     "selenium",
-    "snailz"
+    "snailz",
+    "structlog"
 ]
 
 [tool.ruff.lint.extend-per-file-ignores]
 "**/test_*.py" = ["F401", "F811"] # ignore complaints about unused imports for fixtures
 
 [tool.mccole]
-skips = ["templates"]
+skips = ["CLAUDE.md", "templates"]
 
 [tool.mccole.renames]
 "CODE_OF_CONDUCT.md" = "code_of_conduct.md"
