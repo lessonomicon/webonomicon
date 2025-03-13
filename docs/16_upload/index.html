@@ -25,11 +25,35 @@
 </nav>
 <main>
 <h1>Uploading Files</h1>
-<p id="terms">Terms defined: <a href="../glossary.html#workflow">workflow</a></p>
+
+<h2>Outline</h2>
 <ul>
-<li>A simple <a href="../glossary.html#workflow">workflow</a><ul>
-<li>One person uploads the file</li>
-<li>A different person has to confirm that the upload is OK</li>
+<li>Show how to upload files using <a href="https://htmx.org/">htmx</a></li>
+<li>File uploads require:<ol>
+<li>HTML form with attribute <code>enctype="multipart/form-data"</code> to encode file data</li>
+<li>Server endpoint</li>
+<li>File storage</li>
+<li>Response handling to give user feedback.</li>
+</ol>
+</li>
+<li>htmx attributes used:<ul>
+<li><code>hx-encoding="multipart/form-data"</code> to encode file data</li>
+<li><code>hx-post="/upload"</code> specifies upload endpoint</li>
+<li><code>hx-target="#file-list"</code> specifies where to display the response</li>
+<li><code>hx-swap="beforeend"</code> specifies how to insert response (append)</li>
+</ul>
+</li>
+<li><a href="./server.py`"><code>server.py</code></a><ul>
+<li>Secures filenames to prevent path traversal attacks</li>
+<li>Limits maximum file size</li>
+<li>Provides endpoints for uploading, listing, and deleting files</li>
+<li>Serve static files from <code>../static</code> as before</li>
+</ul>
+</li>
+<li>Things we <em>should</em> do:<ul>
+<li>Validate file types and content</li>
+<li>Virus/malware scanning</li>
+<li>Authentication and authorization for upload permissions</li>
 </ul>
 </li>
 </ul>
