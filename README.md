@@ -74,8 +74,7 @@ All contributors are required to respect our [Code of Conduct](./CODE_OF_CONDUCT
 
 <div class="appendices" markdown="1">
 
-1.  [Designing a Workflow](./97_workflow/index.md)
-1.  [FastHTML](./98_fasthtml/index.md)
+1.  [Designing a Workflow](./98_workflow/index.md)
 1.  [Certificates](./99_cert/index.md)
 1.  [License](./LICENSE.md)
 1.  [Code of Conduct](./CODE_OF_CONDUCT.md)

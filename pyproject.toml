@@ -1,6 +1,7 @@
 [project]
 name = "webonomicon"
-version = "0.1.28"
+version = "0.1.29"
+requires-python = ">=3.12"
 dependencies = [
     "beautifulsoup4",
     "flask",
@@ -28,7 +29,7 @@ dependencies = [
 "**/test_*.py" = ["F401", "F811"] # ignore complaints about unused imports for fixtures
 
 [tool.mccole]
-skips = ["CLAUDE.md", "templates"]
+skips = ["CLAUDE.md", "templates", "unused"]
 
 [tool.mccole.renames]
 "CODE_OF_CONDUCT.md" = "code_of_conduct.md"
